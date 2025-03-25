@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.18)  25 MAR 2025 08:59
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.18)  25 MAR 2025 23:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -687,9 +687,9 @@ LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
 \thai@year=\count330
 \thai@year=\count331
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
-(Font)              scaled to size 12.29996pt on input line 171.
+(Font)              scaled to size 12.29996pt on input line 174.
 
-Underfull \hbox (badness 10000) in alignment at lines 168--172
+Underfull \hbox (badness 10000) in alignment at lines 171--175
 [][] 
  []
 
@@ -697,9 +697,9 @@ Underfull \hbox (badness 10000) in alignment at lines 168--172
 
 [3]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 181.
+(Font)              scaled to size 12.0pt on input line 184.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 181.
+(Font)              scaled to size 12.0pt on input line 184.
 
 
 [4
@@ -731,17 +731,17 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
 [8
 
 ]
-Overfull \hbox (12.98328pt too wide) in paragraph at lines 200--200
+Overfull \hbox (12.98328pt too wide) in paragraph at lines 206--206
 []|\TU/TimesNewRoman(0)/b/n/10 SYMBOL| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
 []|\TU/TimesNewRoman(0)/m/n/10 jobs/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
 []|\TU/TimesNewRoman(0)/m/n/10 jobs/
  []
 
@@ -750,7 +750,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--204
 [9
 
 ]
-Overfull \hbox (2.96538pt too wide) in paragraph at lines 212--217
+Overfull \hbox (2.96538pt too wide) in paragraph at lines 218--223
 []  
  []
 
@@ -766,16 +766,10 @@ Package hyperref Warning: bookmark level for unknown chapterxx defaults to 0.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 226.
+(hyperref)                removed on input line 232.
 
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 230.
-LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/it' will be
-(Font)              scaled to size 12.29996pt on input line 230.
-\thai@year=\count332
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 14.0pt on input line 233.
-\thai@year=\count333
+(Font)              scaled to size 14.0pt on input line 234.
 File: ./chart-figure-5.png Graphic file (type bmp)
 <./chart-figure-5.png>
 
@@ -789,11 +783,15 @@ Chapter 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 293.
+(hyperref)                removed on input line 304.
 
-\thai@year=\count334
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
+(Font)              scaled to size 10.0pt on input line 308.
+LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/it' will be
+(Font)              scaled to size 12.29996pt on input line 308.
+\thai@year=\count332
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 13.0pt on input line 320.
+(Font)              scaled to size 13.0pt on input line 331.
 File: ./model2.pdf Graphic file (type pdf)
 <use ./model2.pdf>
 
@@ -807,16 +805,16 @@ Chapter 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 346.
+(hyperref)                removed on input line 357.
 
-\thai@year=\count335
+\thai@year=\count333
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
 []|\TU/TimesNewRoman(0)/m/n/10 jobs/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
 []|\TU/TimesNewRoman(0)/m/n/10 jobs/
  []
 
@@ -829,9 +827,9 @@ Chapter 4.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 394.
+(hyperref)                removed on input line 405.
 
-\thai@year=\count336
+\thai@year=\count334
 
 
 [6
@@ -841,16 +839,16 @@ Chapter 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 406.
+(hyperref)                removed on input line 417.
 
-\thai@year=\count337
+\thai@year=\count335
 (./final-report.bbl
 
 [7
 
 ]
-\thai@year=\count338
-\thai@year=\count339
+\thai@year=\count336
+\thai@year=\count337
 
 Underfull \hbox (badness 1067) in paragraph at lines 18--23
 []\TU/TimesNewRoman(0)/m/n/10 Hypersense, 2020,  “Is the virtual celebrity indu
@@ -877,10 +875,10 @@ Package hyperref Warning: bookmark level for unknown apdx defaults to 0.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.0pt
-(hyperref)                replaced by space on input line 449.
+(hyperref)                replaced by space on input line 460.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
 
  []
 
@@ -892,15 +890,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 450--451
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.0pt
-(hyperref)                replaced by space on input line 521.
+(hyperref)                replaced by space on input line 532.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 522--523
+Underfull \hbox (badness 10000) in paragraph at lines 533--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 539--540
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
 
  []
 
@@ -916,15 +914,15 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `final-report.out' has not changed.
-(rerunfilecheck)             Checksum: F7B6A714CB527AC3B14EA456535BB4F9;6053.
+(rerunfilecheck)             Checksum: 3FA8ED1E280CA4055594DECA6F0E6D27;6091.
  ) 
 Here is how much of TeX's memory you used:
  17381 strings out of 473832
  329281 string characters out of 5729481
- 768215 words of memory out of 5000000
+ 768253 words of memory out of 5000000
  40188 multiletter control sequences out of 15000+600000
  561510 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,11n,121p,882b,551s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,11n,121p,478b,551s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on final-report.pdf (23 pages).
