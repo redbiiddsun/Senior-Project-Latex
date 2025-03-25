@@ -40,6 +40,7 @@
 \contentsline {chapter}{\normalsize \bf \MakeUppercase []{{\numberline {5.}\hskip -0.5em Conclusions}}}{7}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Problems and Solutions}{7}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Future Works}{7}{section.5.2}%
-\contentsline {chapter}{\mdseries \bf \MakeUppercase []{Appendix}}{8}{section.5.2}%
-\contentsline {apdx}{A\hskip 1em First appendix title}{9}{section.5.2}%
-\contentsline {apdx}{B\hskip 1em Second appendix title}{11}{equation.1.5}%
+\contentsline {chapter}{\mdseries \bf \MakeUppercase []{References}}{8}{section.5.2}%
+\contentsline {chapter}{\mdseries \bf \MakeUppercase []{Appendix}}{9}{section.5.2}%
+\contentsline {apdx}{A\hskip 1em First appendix title}{10}{section.5.2}%
+\contentsline {apdx}{B\hskip 1em Second appendix title}{12}{equation.1.5}%
