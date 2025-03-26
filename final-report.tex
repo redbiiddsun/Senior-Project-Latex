@@ -58,9 +58,8 @@
 \def\appendixnames{Appendix} %%% Appendices or Appendix
 
 \def\thaiworktype{ปริญญานิพนธ์} %  Project or research project % 
-\def\thaidisstitleone{หัวข้อปริญญานิพนธ์บรรทัดแรก}
-\def\thaidisstitletwo{หัวข้อปริญญานิพนธ์บรรทัดสอง}
-\def\thaidissauthor{นายมอส}
+\def\thaidisstitleone{เว็บแอปพลิเคชัน AI สำหรับการแปลงฟอร์มกระดาษเป็นเว็บฟอร์ม}
+\def\thaidissauthor{นายประภากร บุตรโยจันโท}
 \def\thaidissauthortwo{นายพณศร ศรีสยาม} %Optional
 \def\thaidissauthorthree{นายโบ๊ท} %Optional
 
@@ -233,70 +232,67 @@ Test & Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non condi
 
 \section{Problem Statement} 
 
-In recent years, the world has become more digitalize than ever from social interactions to business operations, and digital technology has played an increasingly important role in our lives.
+PLEASE WAIT
 
-This rapid transformation has reshaped the way we communicate, work and access information, making technology an essential part of modern life. As businesses and individuals increasingly rely on digital platforms, the demand of conversion to digital has increasing. One aspect of digital shift is traditional form conversion
+\section{Potential Benefits}
 
-
-
-and the many businesses still
-store customer information on paper. Nevertheless, it is an ineffective way to store
-data, particularly private data. Since the analysis of all the forms, including the need
-to design a basic database after the analysis flow, digital transformation will take a
-long time, even if the organization decides to improve its data storage. This is because
-paper-based organizations will inevitably become digital organizations. Additionally,
-the main issue is that developers spend the majority of their time working with
-databases and then create a single web page application to replace a paper-based form.
-
-System developers must analyze forms, design database structures, and create user interfaces from scratch for each new form. This results in delays in development and inefficient use of manpower.
-
-\begin{figure}[!h]
-\centering
-\fbox{\includegraphics[width=10cm]{./chart-figure-5.png}}
-\caption{This is the figure x1}\label{fig:chart-figure-5}
-\end{figure}
-
-Get ready, skanks! It's time for the truth train! Fame was like a drug. But what was even more like a drug were the drugs. Attempted murder? Now honestly, what is that? Do they give a Nobel Prize for attempted chemistry?
-
-"Thank the Lord"? That sounded like a prayer. A prayer in a public school. God has no place within these walls, just like facts don't have a place within an organized religion. Thank you, steal again. I hope this has taught you kids a lesson: kids never learn.
-
-…And the fluffy kitten played with that ball of string all through the night. On a lighter note, a Kwik-E-Mart clerk was brutally murdered last night. Oh, so they have Internet on computers now!
-
-You don't like your job, you don't strike. You go in every day and do it really half-assed. That's the American way. Lisa, vampires are make-believe, like elves, gremlins, and Eskimos. Jesus must be spinning in his grave!
-
-I prefer a vehicle that doesn't hurt Mother Earth. It's a go-cart, powered by my own sense of self-satisfaction. Marge, it takes two to lie. One to lie and one to listen. Attempted murder? Now honestly, what is that? Do they give a Nobel Prize for attempted chemistry?
-
-I was saying "Boo-urns." Bart, with \$10,000 we'd be millionaires! We could buy all kinds of useful things like…love! I'll keep it short and sweet — Family. Religion. Friendship. These are the three demons you must slay if you wish to succeed in business.
-
-How could you?! Haven't you learned anything from that guy who gives those sermons at church? Captain Whatshisname? We live in a society of laws! Why do you think I took you to all those Police Academy movies? For fun? Well, I didn't hear anybody laughing, did you? Except at that guy who made sound effects. Makes sound effects and laughs. Where was I? Oh yeah! Stay out of my booze. I can't go to juvie. They use guys like me as currency.
-
-Oh, loneliness and cheeseburgers are a dangerous mix. "Thank the Lord"? That sounded like a prayer. A prayer in a public school. God has no place within these walls, just like facts don't have a place within an organized religion.
+COMING SOON NA 
 
 
-\section{Motivations}
-Explain the motivations of your works.  
-\begin{itemize}
-\item   What are the problems you are addressing? 
-\item  Why they are important?
-\item  What are the limitations of existing approaches? 
-\end{itemize}
-You may combine this section with the background section.
-
-
-\section{Problem Statements}
 
 \section{Objectives}
+\begin{itemize}
+\item   To reduce the workload and development process for developers. 
+\item   To acquire the knowledge and skills necessary for developing an AI-powered web
+application
+\item To acquire proficiency in utilizing a Large language models and adapt its capabilities to suit the
+requirements of this project.
+\item  To be the secure all data and form management website
+\end{itemize}
+
 
 \section{Scope of Work}
 
-Explain the scope of your works. 
+The scope of this project involves the development of a web application that enables users to upload a PDF or image file. The web application will process text extraction using optical character recognition (OCR). The primary function of the web application includes creating a form, editing a form, deleting a form, and filling a form. The final deliverable of this project will be a responsive web interface web application that allows users to manage the form and view the data, including ensuring data privacy and security measures to protect sensitive information by implementing authentication for the creator and a normal user. The project involves research of optical character recognition (OCR) for the text extraction from the image and the development of generative AI for data type generation, also a Thai language translation to English.
+%\begin{itemize}
+%\item   What are the problems you are addressing? 
+%\item  Why they are important?
+%\item  What are the limitations of existing approaches? 
+%\end{itemize}
+
+\section{Limitation of Project}
+The limitation of the project will addresses a possible constraints and challenges that might affect its scope, execution, or outcomes. the limiting factor are include time, cost and risk etc.
+
 \begin{itemize}
-\item   What are the problems you are addressing? 
-\item  Why they are important?
-\item  What are the limitations of existing approaches? 
+ \item \textbf{OCR Accuracy:} The accuracy of OCR text extraction may vary depending on the quality of the uploaded document, such as low-resolution images, poor lighting, and the project does not support handwritten text.
+ 
+    \item \textbf{Language Support:} While the system has the ability to translate text, the accuracy and availability of supported languages may be limited, with the project currently supporting Thai and English form only.
+    
+    \item \textbf{Required User Reviewing:} After the text extraction and layout detection, the system required a user to review and correct a input label that the system have process. The limitation required of user reviewing because of the lack of OCR accuracy and the system error.
+      
+    \item \textbf{Data Privacy and Security:} Despite the implementation of verification and security measures, there may still be vulnerabilities related to handling sensitive data, which are continuously checked and updated.
 \end{itemize}
 
+
 \section{Project Schedule}
+For the first semester, our project focus on researching and design phase, We have researching all core fundamental concept and define a problem and background of the project. In the design phase, we have design a database design, UX/UI design, architecture design. And this phase also including a Optical Character Recognition proof of concept.
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width=10cm]{./assets/schedule-term1.png}}
+\caption{Schedule for first semester}\label{fig:chart-figure-5}
+\end{figure}
+
+For the second semester, our project focus on implementing the form extractor and generative AI for the process of detect a form. We also focus on web application development and integrate a web application with the form extractor. And Th
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width=10cm]{./assets/schedule-term1.png}}
+\caption{Schedule for second semester}\label{fig:chart-figure-5}
+\end{figure}
+
+\section{Expected Outcomes}
+This project aims to develop a fully functional web application that able to converting a paper-based form or pdf form into a web-based form by utilizing a generative AI for generate a data type of form label. And the web application should reduce a time developer have spend when they converting a form.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%  Literature Review %%%%%%%%%%%%%%%%%%%%%%%%%%
