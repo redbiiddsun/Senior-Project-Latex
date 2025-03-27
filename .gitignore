@@ -1,7 +1,7 @@
-.aux
-.lof
-.log
-.lot
-.out
-.toc
-.synctex.gx
+*.aux
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.synctex.gx
