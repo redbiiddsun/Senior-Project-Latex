@@ -556,7 +556,7 @@ The Registration and Authentication System must enable a user to register and lo
 
 \section{Use Case Diagram}
 
-From the figure 3.1 The diagram shows a relationship between the user and the system by using a use case diagram. The user of the system is a developer that needs to transform a paper-base form into web application form and the user who going to fill the form. The system consists of 3 different systems, which are paper-based form analysis systems, form schema generator systems, web form systems and registration and authentication systems. The user can upload a paper-based form to the system, and the system will transform the form into a web-based form.
+From the figure \ref{fig:use-case} The diagram shows a relationship between the user and the system by using a use case diagram. The user of the system is a developer that needs to transform a paper-base form into web application form and the user who going to fill the form. The system consists of 3 different systems, which are paper-based form analysis systems, form schema generator systems, web form systems and registration and authentication systems. The user can upload a paper-based form to the system, and the system will transform the form into a web-based form.
 
 \begin{figure}[!h]
 \centering
@@ -676,17 +676,17 @@ Alternate scenario (user access the form required a login without login):
 
 \section{Activity Diagram}
 
-From Figure 3.2 The Activity diagram shows the sequence how Generative AI for
+From Figure \ref{fig:activity-diagram} The Activity diagram shows the sequence how Generative AI for
 Traditional Form Converter System is working.
 
 \begin{figure}[!h]
 \centering
 \fbox{\includegraphics[width=10cm]{./assets/activity-diagram.png}}
-\caption{Activity Diagram}\label{fig:activity}
+\caption{Activity Diagram}\label{fig:activity-diagram}
 \end{figure}
 
 
-
+\newpage
 \subsection{Form creator}
 
 \begin{itemize}
@@ -719,10 +719,10 @@ Traditional Form Converter System is working.
 \begin{figure}[!h]
 \centering
 \fbox{\includegraphics[width=10cm]{./assets/system-arch.png}}
-\caption{System Architecture}\label{fig:sysarch}
+\caption{System Architecture}\label{fig:system-arch}
 \end{figure}
 
-Figure 3.3, The diagram shown a system architecture in figure above, The System have divided into 3 part which front-end, back-end and database, each part have shown a technology stack, and here are the description of each component
+Figure \ref{fig:system-arch}, The diagram shown a system architecture in figure above, The System have divided into 3 part which front-end, back-end and database, each part have shown a technology stack, and here are the description of each component
 
 \begin{itemize}
 \item  \textbf{VueJS} is a Front-end JavaScript library for building UI
@@ -748,6 +748,8 @@ Figure \ref{fig:er-diagram} shown a project database design, the system consist 
 \caption{ER Diagram}\label{fig:er-diagram}
 \end{figure}
 
+
+\newpage
 \section{User Interface Design}
 
 \subsection{Login Page}
@@ -758,7 +760,7 @@ Figure \ref{fig:er-diagram} shown a project database design, the system consist 
 \caption{Login Page}\label{fig:login}
 \end{figure}
 
-Figure 3.5 represents the login screen of the web application. This page have a email field,  password field and a login button to sent a credential to the back-end system. 
+Figure \ref{fig:login} represents the login screen of the web application. This page have a email field,  password field and a login button to sent a credential to the back-end system. 
 
 \subsection{Create Your Account }
 
@@ -768,7 +770,7 @@ Figure 3.5 represents the login screen of the web application. This page have a 
 \caption{Create Account Page}\label{fig:create-acc}
 \end{figure}
 
-Figure 3.6 represents the create account page of the web application. This page allow user to create their own account by the user must provide a following field which is name, email and password.
+Figure \ref{fig:create-acc} represents the create account page of the web application. This page allow user to create their own account by the user must provide a following field which is name, email and password.
 
 \subsection{Forgot Password}
 
@@ -808,8 +810,9 @@ At the Figure \ref{fig:Forgot-Password-code}, It represents a OTP confirmation p
 \caption{Dashboard Page}\label{fig:Dashboard}
 \end{figure}
 
-Figure 3.10 represents the dashboard page, it will show all the form that user have and the add form section at the left hand side, also have a upload status while file is uploading.
+Figure \ref{fig:Dashboard} represents the dashboard page, it will show all the form that user have and the add form section at the left hand side, also have a upload status while file is uploading.
 
+\newpage
 \subsection{Edit Form}
 
 \begin{figure}[!h]
@@ -818,18 +821,17 @@ Figure 3.10 represents the dashboard page, it will show all the form that user h
 \caption{Edit Form Page}\label{fig:edit-form}
 \end{figure}
 
-Figure 3.10 represents the Edit Form. The edit form page uses the SurveyJS library, which allows users to fully customize a form, including changing the color, adding a second page, and creating form conditions.
+Figure \ref{fig:edit-form}  represents the Edit Form. The edit form page uses the SurveyJS library, which allows users to fully customize a form, including changing the color, adding a second page, and creating form conditions.
 
-\subsection{Form}
-
-Figure 3.10 represents the Edit Form. The edit form page uses the SurveyJS library, which allows users to fully customize a form, including changing the color, adding a second page, and creating form conditions.
+\subsection{Form Page}
 
 \begin{figure}[!h]
 \centering
-\fbox{\includegraphics[width= 10cm]{./assets/UI/edit-form.png}}
-\caption{Edit Form Page}\label{fig:edit-form}
+\fbox{\includegraphics[width= 10cm]{./assets/UI/form-page.png}}
+\caption{Form Page}\label{fig:form-page}
 \end{figure}
 
+Figure \ref{fig:form-page} showcases the example of web form user interface, which it use a surveyJS to render the UI. This  page will allow user to fill the information and submit a data to the system.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
