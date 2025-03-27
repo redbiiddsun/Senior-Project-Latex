@@ -10,53 +10,63 @@
 \contentsline {chapterxx}{\mdseries \bf CHAPTER}{1}{chapter.1}%
 \contentsline {chapter}{\normalsize \bf \MakeUppercase []{{\numberline {1.}\hskip -0.5em Introduction}}}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Problem Statement}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Objectives}{1}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Scope of Work}{1}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Limitation of Project}{1}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Project Schedule}{2}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Expected Outcomes}{3}{section.1.6}%
-\contentsline {chapter}{\normalsize \bf \MakeUppercase []{{\numberline {2.}\hskip -0.5em Background Theory and Related Work}}}{4}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Recommender Systems}{4}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Text Processing Algorithms}{4}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Algorithm I}{4}{subsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.1}test}{4}{subsubsection.2.2.1.1}%
-\contentsline {subsection}{\numberline {2.2.2}Algorithm II}{4}{subsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.2.1}Step I}{5}{subsubsection.2.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2.2}Step II}{5}{subsubsection.2.2.2.2}%
-\contentsline {section}{\numberline {2.3}Development Tools}{5}{section.2.3}%
-\contentsline {chapter}{\normalsize \bf \MakeUppercase []{{\numberline {3.}\hskip -0.5em DESIGN AND METHODOLOGY}}}{6}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Project Functionality}{6}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}System Requirements}{6}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Feature List}{6}{subsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.2.1}Paper-Based Form Analysis System}{6}{subsubsection.3.1.2.1}%
-\contentsline {subsubsection}{\numberline {3.1.2.2}Form Schema generator System}{6}{subsubsection.3.1.2.2}%
-\contentsline {subsubsection}{\numberline {3.1.2.3}Web Form System}{6}{subsubsection.3.1.2.3}%
-\contentsline {subsubsection}{\numberline {3.1.2.4}Registration and Authentication System}{6}{subsubsection.3.1.2.4}%
-\contentsline {section}{\numberline {3.2}Use Case Diagram}{6}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Use Case Narrative}{7}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Autentication}{7}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Register}{7}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Create a form}{8}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Edit a form}{8}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}View a form data}{8}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Fill up the form}{9}{subsection.3.3.6}%
-\contentsline {section}{\numberline {3.4}Activity Diagram}{9}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Form creator}{9}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Signed-in user}{10}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Non Signed-in user}{10}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}System Architecture}{10}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Database Design}{11}{section.3.6}%
-\contentsline {section}{\numberline {3.7}User Interface Design}{11}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Login Page}{11}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Create Your Account }{12}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Forgot Password}{12}{subsection.3.7.3}%
-\contentsline {subsection}{\numberline {3.7.4}Dashboard}{14}{subsection.3.7.4}%
-\contentsline {subsection}{\numberline {3.7.5}Edit Form}{14}{subsection.3.7.5}%
-\contentsline {chapter}{\normalsize \bf \MakeUppercase []{{\numberline {4.}\hskip -0.5em Implementation Results}}}{15}{chapter.4}%
-\contentsline {chapter}{\normalsize \bf \MakeUppercase []{{\numberline {5.}\hskip -0.5em Conclusions}}}{16}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Problems and Solutions}{16}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Future Works}{16}{section.5.2}%
-\contentsline {chapter}{\mdseries \bf \MakeUppercase []{References}}{17}{section.5.2}%
-\contentsline {chapter}{\mdseries \bf \MakeUppercase []{Appendix}}{18}{section.5.2}%
-\contentsline {apdx}{A\hskip 1em First appendix title}{19}{section.5.2}%
-\contentsline {apdx}{B\hskip 1em Second appendix title}{21}{equation.1.5}%
+\contentsline {section}{\numberline {1.2}Potential Benefits}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Objectives}{1}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Scope of Work}{1}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Limitation of Project}{2}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Project Schedule}{2}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Expected Outcomes}{2}{section.1.7}%
+\contentsline {chapter}{\normalsize \bf \MakeUppercase []{{\numberline {2.}\hskip -0.5em Background Theory and Related Research}}}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction and Background}{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Introduction}{4}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Background}{4}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Theory and Core Concepts}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Artificial Intelligence (AI)}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Machine Learning (ML)}{4}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Computer Vision (CV)}{5}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Image Processing}{5}{subsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.4.1}Image Acquisition:}{5}{subsubsection.2.2.4.1}%
+\contentsline {section}{\numberline {2.3}Text Processing Algorithms}{5}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Algorithm I}{5}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.1}test}{5}{subsubsection.2.3.1.1}%
+\contentsline {subsection}{\numberline {2.3.2}Algorithm II}{5}{subsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.1}Step I}{5}{subsubsection.2.3.2.1}%
+\contentsline {subsubsection}{\numberline {2.3.2.2}Step II}{5}{subsubsection.2.3.2.2}%
+\contentsline {section}{\numberline {2.4}Development Tools}{5}{section.2.4}%
+\contentsline {chapter}{\normalsize \bf \MakeUppercase []{{\numberline {3.}\hskip -0.5em DESIGN AND METHODOLOGY}}}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Project Functionality}{7}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}System Requirements}{7}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Feature List}{7}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Paper-Based Form Analysis System}{7}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}Form Schema generator System}{7}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}Web Form System}{7}{subsubsection.3.1.2.3}%
+\contentsline {subsubsection}{\numberline {3.1.2.4}Registration and Authentication System}{7}{subsubsection.3.1.2.4}%
+\contentsline {section}{\numberline {3.2}Use Case Diagram}{7}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Use Case Narrative}{8}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Autentication}{8}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Register}{8}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Create a form}{9}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Edit a form}{9}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}View a form data}{9}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Fill up the form}{10}{subsection.3.3.6}%
+\contentsline {section}{\numberline {3.4}Activity Diagram}{10}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Form creator}{10}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Signed-in user}{11}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Non Signed-in user}{11}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}System Architecture}{11}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Database Design}{12}{section.3.6}%
+\contentsline {section}{\numberline {3.7}User Interface Design}{12}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Login Page}{12}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Create Your Account }{13}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Forgot Password}{13}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Dashboard}{15}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.5}Edit Form}{15}{subsection.3.7.5}%
+\contentsline {subsection}{\numberline {3.7.6}Form}{15}{subsection.3.7.6}%
+\contentsline {chapter}{\normalsize \bf \MakeUppercase []{{\numberline {4.}\hskip -0.5em Implementation Results}}}{17}{chapter.4}%
+\contentsline {chapter}{\normalsize \bf \MakeUppercase []{{\numberline {5.}\hskip -0.5em Conclusions}}}{18}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Problems and Solutions}{18}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Future Works}{18}{section.5.2}%
+\contentsline {chapter}{\mdseries \bf \MakeUppercase []{References}}{19}{section.5.2}%
+\contentsline {chapter}{\mdseries \bf \MakeUppercase []{Appendix}}{20}{section.5.2}%
+\contentsline {apdx}{A\hskip 1em First appendix title}{21}{section.5.2}%
+\contentsline {apdx}{B\hskip 1em Second appendix title}{23}{equation.1.5}%

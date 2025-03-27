@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.18)  28 MAR 2025 02:34
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.18)  28 MAR 2025 02:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -542,6 +542,9 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 
 (./final-report.aux
 
+LaTeX Warning: Label `fig:edit-form' multiply defined.
+
+
 LaTeX Warning: Label `fig:x1' multiply defined.
 
 
@@ -550,33 +553,33 @@ LaTeX Warning: Label `fig:x1' multiply defined.
 )
 \openout1 = `final-report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 112.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 114.
 LaTeX Font Info:    Trying to load font information for T3+cmr on input line 11
-2.
+4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -621,7 +624,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: xetex.def on input line 149.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 112.
+Package hyperref Info: Link coloring ON on input line 114.
 
 (./final-report.out) (./final-report.out)
 \@outlinefile=\write3
@@ -635,24 +638,24 @@ File: logo02.jpg Graphic file (type bmp)
 
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 122
+LaTeX Font Info:    Trying to load font information for U+msa on input line 124
 .
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 122
+LaTeX Font Info:    Trying to load font information for U+msb on input line 124
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 12
-2.
+4.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Underfull \hbox (badness 10000) in alignment at lines 122--122
+Underfull \hbox (badness 10000) in alignment at lines 124--124
 [] [] 
  []
 
@@ -663,9 +666,9 @@ Underfull \hbox (badness 10000) in alignment at lines 122--122
 Package hyperref Warning: bookmark level for unknown chapterx defaults to 0.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 127.
+(Font)              scaled to size 10.0pt on input line 129.
 
-Underfull \hbox (badness 10000) in alignment at lines 144--146
+Underfull \hbox (badness 10000) in alignment at lines 141--144
 [][] 
  []
 
@@ -673,7 +676,7 @@ Underfull \hbox (badness 10000) in alignment at lines 144--146
 
 [2]
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 12.29996pt on input line 157.
+(Font)              scaled to size 12.29996pt on input line 155.
 \thai@year=\count320
 \thai@year=\count321
 \thai@year=\count322
@@ -687,9 +690,9 @@ LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
 \thai@year=\count330
 \thai@year=\count331
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
-(Font)              scaled to size 12.29996pt on input line 173.
+(Font)              scaled to size 12.29996pt on input line 171.
 
-Underfull \hbox (badness 10000) in alignment at lines 170--174
+Underfull \hbox (badness 10000) in alignment at lines 168--172
 [][] 
  []
 
@@ -697,9 +700,9 @@ Underfull \hbox (badness 10000) in alignment at lines 170--174
 
 [3]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 183.
+(Font)              scaled to size 12.0pt on input line 181.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 183.
+(Font)              scaled to size 12.0pt on input line 181.
 
 
 [4
@@ -731,17 +734,17 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
 [8
 
 ]
-Overfull \hbox (12.98328pt too wide) in paragraph at lines 205--205
+Overfull \hbox (12.98328pt too wide) in paragraph at lines 203--203
 []|\TU/TimesNewRoman(0)/b/n/10 SYMBOL| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 []|\TU/TimesNewRoman(0)/m/n/10 jobs/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 []|\TU/TimesNewRoman(0)/m/n/10 jobs/
  []
 
@@ -750,7 +753,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--209
 [9
 
 ]
-Overfull \hbox (2.96538pt too wide) in paragraph at lines 217--222
+Overfull \hbox (2.96538pt too wide) in paragraph at lines 215--220
 []  
  []
 
@@ -766,10 +769,10 @@ Package hyperref Warning: bookmark level for unknown chapterxx defaults to 0.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 231.
+(hyperref)                removed on input line 229.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 14.0pt on input line 233.
+(Font)              scaled to size 14.0pt on input line 231.
 
 
 [1
@@ -777,8 +780,15 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
 ]
 File: ./assets/schedule-term1.png Graphic file (type bmp)
 <./assets/schedule-term1.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: ./assets/schedule-term2.png Graphic file (type bmp)
 <./assets/schedule-term2.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 
 [2]
@@ -788,29 +798,31 @@ Chapter 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 294.
+(hyperref)                removed on input line 302.
 
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 298.
-LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/it' will be
-(Font)              scaled to size 12.29996pt on input line 298.
-\thai@year=\count332
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 13.0pt on input line 321.
-File: ./model2.pdf Graphic file (type pdf)
-<use ./model2.pdf>
+(Font)              scaled to size 13.0pt on input line 305.
 
 
 [4
 
 ]
+File: ./model2.pdf Graphic file (type pdf)
+<use ./model2.pdf>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 
 [5]
+
+[6]
 Chapter 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 347.
+(hyperref)                removed on input line 379.
 
 File: ./assets/usecase.png Graphic file (type bmp)
 <./assets/usecase.png>
@@ -819,30 +831,30 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[6
+[7
 
 ]
 
-[7]
-
 [8]
+
+[9]
 File: ./assets/activity-diagram.png Graphic file (type bmp)
 <./assets/activity-diagram.png>
 
 
-[9]
+[10]
 File: ./assets/system-arch.png Graphic file (type bmp)
 <./assets/system-arch.png>
 
 
-[10]
+[11]
 File: ./assets/ER-diagram.png Graphic file (type bmp)
 <./assets/ER-diagram.png>
 File: ./assets/UI/Login.png Graphic file (type bmp)
 <./assets/UI/Login.png>
 
 
-[11]
+[12]
 File: ./assets/UI/Login.png Graphic file (type bmp)
 <./assets/UI/Login.png>
 File: ./assets/UI/forgot-password.png Graphic file (type bmp)
@@ -860,42 +872,54 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[12]
-
 [13]
+
+[14]
 File: ./assets/UI/DashBoard.png Graphic file (type bmp)
 <./assets/UI/DashBoard.png>
 File: ./assets/UI/edit-form.png Graphic file (type bmp)
 <./assets/UI/edit-form.png>
+File: ./assets/UI/edit-form.png Graphic file (type bmp)
+<./assets/UI/edit-form.png>
 
 
-[14]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[15]
+
+[16]
 Chapter 4.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 659.
+(hyperref)                removed on input line 703.
 
-\thai@year=\count333
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
+(Font)              scaled to size 10.0pt on input line 710.
+LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/it' will be
+(Font)              scaled to size 12.29996pt on input line 710.
+\thai@year=\count332
 
 
-[15
+[17
 
 ]
 Chapter 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern -5.0pt
-(hyperref)                removed on input line 671.
+(hyperref)                removed on input line 715.
 
-\thai@year=\count334
+\thai@year=\count333
 (./final-report.bbl
 
-[16
+[18
 
 ]
+\thai@year=\count334
 \thai@year=\count335
-\thai@year=\count336
 
 Underfull \hbox (badness 1067) in paragraph at lines 18--23
 []\TU/TimesNewRoman(0)/m/n/10 Hypersense, 2020,  “Is the virtual celebrity indu
@@ -911,47 +935,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--23
 
 )
 
-[17
+[19
 
 ]
 
-[18]
+[20]
 
 Package hyperref Warning: bookmark level for unknown apdx defaults to 0.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.0pt
-(hyperref)                replaced by space on input line 714.
+(hyperref)                replaced by space on input line 758.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 715--716
+Underfull \hbox (badness 10000) in paragraph at lines 759--760
 
  []
 
 
 
-[19]
+[21]
 
-[20]
+[22]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.0pt
-(hyperref)                replaced by space on input line 786.
+(hyperref)                replaced by space on input line 830.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 787--788
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 804--805
+Underfull \hbox (badness 10000) in paragraph at lines 831--832
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 848--849
 
-[21] (./final-report.aux)
+ []
+
+
+
+[23] (./final-report.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -961,15 +985,15 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `final-report.out' has not changed.
-(rerunfilecheck)             Checksum: BCA84E4444CA9E61B0193679B3FA1512;8600.
+(rerunfilecheck)             Checksum: 0BBDC1EFD3FE6A1F67367966D233990E;10188.
  ) 
 Here is how much of TeX's memory you used:
- 17498 strings out of 473832
- 332674 string characters out of 5729481
- 771488 words of memory out of 5000000
- 40292 multiletter control sequences out of 15000+600000
+ 17501 strings out of 473832
+ 332718 string characters out of 5729481
+ 774136 words of memory out of 5000000
+ 40295 multiletter control sequences out of 15000+600000
  561510 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,9n,121p,1241b,513s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,9n,121p,1222b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on final-report.pdf (32 pages).
+Output written on final-report.pdf (34 pages).
