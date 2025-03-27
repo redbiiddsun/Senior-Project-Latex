@@ -230,6 +230,7 @@ Test & Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non condi
 
 \section{Problem Statement} 
 
+<<<<<<< Updated upstream
 Nowadays, there is a shift towards digitalization, whether it is using electronic devices to record instead of using paper or storing data in a database instead of recording on paper. However, there are many things that have not been transformed to be more digital, such as official documents and business documents that are still paper or forms that have been recorded on paper before. For things that have not been developed to be more digital, we are especially interested in improving the filling of paper forms. We found that the steps in the development process that change from paper forms to web forms require developers to analyze forms, create databases, and develop web applications, which takes a lot of time and the number of developers. We see that converting paper forms to digital forms by taking pictures of the forms and the system will create a web form for them. Improving the filling of paper forms to be more digital will help reduce global warming caused by excessive paper use.
 
 \section{Potential Benefits}
@@ -237,6 +238,9 @@ Nowadays, there is a shift towards digitalization, whether it is using electroni
 Potential Benefitsof this web application include improved efficiency through automated form creation, enabling the rapid digitization of paper forms and saving valuable time that can be used for other tasks, and potentially reducing costs by eliminating unnecessary labor in form processing.
 
 
+=======
+In recent year, the world has become more digitized than ever, whether it be using electronic devices for note-taking instead of paper or storing a data in a database rather than use a paper documentation, However, there are still many aspects that have not been transform to be a digital, such as a government organization that still rely on paper documentation or  the data forms that have been previously recorded on paper. However, for those that have not been developed to be digital, we were motivated to improve the efficiency of form filling. And we found that the development process from paper-based forms to web forms required developers to do an analysis of the form, create a database, and develop a front-end and backend system. Which causes a developer time to spend and resources of developers. We acknowledge this difficulty and offer a solution that converts paper forms into web form ones so that the system can automatically create a web form by just taking a picture of the form. By decreasing excessive paper use, this development in digitizing form-filling procedures will not only increase efficiency but also lessen the environmental impact and help to slow down global warming.
+>>>>>>> Stashed changes
 
 \section{Objectives}
 \begin{itemize}
@@ -278,15 +282,15 @@ For the first semester, our project focus on researching and design phase, We ha
 \begin{figure}[!h]
 \centering
 \fbox{\includegraphics[width=10cm]{./assets/schedule-term1.png}}
-\caption{Schedule for first semester}\label{fig:chart-figure-5}
+\caption{Schedule for first semester}\label{fig:schedule-1}
 \end{figure}
 
-For the second semester, our project focus on implementing the form extractor and generative AI for the process of detect a form. We also focus on web application development and integrate a web application with the form extractor. And Th
+For the second semester, our project focus on implementing the form extractor and generative AI for the process of detect a form. We also focus on web application development and integrate a web application with the form extractor. also including the testing phase a system evaluation.
 
 \begin{figure}[!h]
 \centering
-\fbox{\includegraphics[width=10cm]{./assets/schedule-term1.png}}
-\caption{Schedule for second semester}\label{fig:chart-figure-5}
+\fbox{\includegraphics[width=10cm]{./assets/schedule-term2.png}}
+\caption{Schedule for second semester}\label{fig:schedule-2}
 \end{figure}
 
 \section{Expected Outcomes}
@@ -369,51 +373,325 @@ This is the farthest level of subsection we permitted. (We support only 4th leve
 
 \section{Development Tools}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%CHAPTER 3 DESIGN AND METHODOLOGY%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Proposed Work}
+\chapter{DESIGN AND METHODOLOGY}
+
+This chapter will cover the features, architecture, functionalities, design methods, and
+diagrams of our web application. We will delve into the details of the application’s
+functionality and architecture.
+
+\section{Project Functionality}
+
+\subsection{System Requirements}
+
+\begin{itemize}
+ \item The web application must allow users to log in with email and password. 
+ \item The web application must allow the user to upload a form file to the system.
+ \item The web application must allow users to fill the form without login.
+ \item The web application must allow users to view the data of the form.
+ \item The web application must allow users to edit the form before publishing.
+ \item The web application must allow users to delete the form.
+ \item The web applications must provide the option for all logged-in users to logout.
+\end{itemize}
+
+\subsection{Feature List}
+
+\subsubsection{Paper-Based Form Analysis System}
+
+The Paper-Based Form Analysis System will extract all the text from the document that is uploaded by the user via a web application. The system will then analyze the form’s pattern ,extract the input labels, translate the text into English, and send the translated information to a generative AI for data type generation.
+
+\subsubsection{Form Schema generator System}
+
+The Form Schema generator System will receive information from the Paper-Based Form Analysis System and Form Schema generator System must be able to generate a form schema that compatible with a form library.
+
+\subsubsection{Web Form System}
+
+The Digital Form System must enable users to complete the form, store the data in the database, and see the data created by the form owner.
+
+\subsubsection{Registration and Authentication System}
+
+The Registration and Authentication System must enable a user to register and login to the system by using only email and password. This including a forgot password and the  OTP for reset password.	
 
 
-THIS IS AN EXAMPLE. ALL SECTIONS BELOW ARE OPTIONAL. PLEASE CONSULT YOU ADVISOR AND DESIGN YOUR OWN SECTION
+\section{Use Case Diagram}
 
-\emph{\textthai{หัวข้อต่าง ๆ ในแต่ละบทเป็นเพียงตัวอย่างเท่านั้น หัวข้อที่จะใส่ในแต่ละบทขึ้นอยู่กับโปรเจคของนักศึกษาและอาจารย์ที่ปรึกษา}}
+From the figure 3.1 The diagram shows a relationship between the user and the system by using a use case diagram. The user of the system is a developer that needs to transform a paper-base form into web application form and the user who going to fill the form. The system consists of 3 different systems, which are paper-based form analysis systems, form schema generator systems, web form systems and registration and authentication systems. The user can upload a paper-based form to the system, and the system will transform the form into a web-based form.
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width=10cm]{./assets/usecase.png}}
+\caption{Use case diagram}\label{fig:use-case}
+\end{figure}
+
+\section{Use Case Narrative}
+
+\subsection{Autentication}
+
+\textbf{Use Case Name:} Autentication \\
+\textbf{Actors:} Form Creator and Required Login User \\
+\textbf{Goal:} Users log in to the system. \\
+\textbf{Preconditions:} User is registered
+
+Main Success Scenario: 
+
+\begin{enumerate}
+    \item User access the website.
+    \item User enter a email and password.
+    \item User submit a email and password.
+    \item System authenticate and navigate to the home page.
+\end{enumerate}
+
+\subsection{Register}
+
+\textbf{Use Case Name:} Register \\
+\textbf{Actors:} Form Creator and Required Login User \\
+\textbf{Goal:} Users register to a system. \\
+\textbf{Preconditions:} User does not have an account
+
+Main Success Scenario: 
+
+\begin{enumerate}
+    \item User access the website.
+    \item User click to create a new account.
+    \item User enter an email and password and personal information.
+    \item User submit information.
+    \item System saves user information and navigates users to the login page.
+
+\end{enumerate}
+
+\subsection{Create a form}
+
+\textbf{Use Case Name:} Create a form \\
+\textbf{Actors:} Form Creator\\
+\textbf{Goal:} Create a form by upload the form file. \\
+\textbf{Preconditions:} User has logged in.
+
+Main Success Scenario: 
+
+\begin{enumerate}
+    \item User go to home page.
+    \item User click at upload a form.
+    \item User select a file to upload.
+    \item System will process the file and navigate users to the edit form page to confirm a form before publishing.
+   
+\end{enumerate}
+
+\subsection{Edit a form}
+
+\textbf{Use Case Name:} Edit a form \\
+\textbf{Actors:} Form Creator\\
+\textbf{Goal:} Edit a form to make a change.\\
+\textbf{Preconditions:} User has logged in.
+
+Main Success Scenario: 
+
+\begin{enumerate}
+    \item User go to home page.
+    \item User click at edit a form at the form user need to make change.
+    \item User make change a form.
+    \item User click back to the previous page.
+    \item System will process autosave and navigate users to the previous page.
+\end{enumerate}
 
 
-Explain the design (how you plan to implement your work) of your project. Adjust the section titles below to suit the types of your work. Detailed physical design like circuits and source codes should be placed in the appendix.
+\subsection{View a form data}
+
+\textbf{Use Case Name:} View a form data \\
+\textbf{Actors:} Form Creator\\
+\textbf{Goal:}View the data that user have input\\
+\textbf{Preconditions:} User has logged in.
+
+Main Success Scenario: 
+
+\begin{enumerate}
+    \item User go to home page.
+    \item User click at view a data of the form.
+    \item User can see a form data
+\end{enumerate}
+
+\subsection{Fill up the form}
+
+\textbf{Use Case Name:} Fill up the form \\
+\textbf{Actors:} Required Login Users and Anonymous User \\
+\textbf{Goal:} Add a new data to the form \\
+\textbf{Preconditions:} User has logged in or non-login user.
+
+Main Success Scenario: 
+
+\begin{enumerate}
+    \item User access a form via the public link
+    \item User fill up a form.
+    \item User submit a form data.
+    \item System will save the data and navigate to the form page again.
+\end{enumerate}
+
+Alternate scenario (user access the form required a login without login):
+
+\begin{enumerate}
+    \item User access a form via the public link
+    \item System will navigate to the login page After login completes the user will redirect back to the form page.
+\end{enumerate}
+
+
+\section{Activity Diagram}
+
+From Figure 3.2 The Activity diagram shows the sequence how Generative AI for
+Traditional Form Converter System is working.
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width=10cm]{./assets/activity-diagram.png}}
+\caption{Activity Diagram}\label{fig:activity}
+\end{figure}
+
+
+
+\subsection{Form creator}
+
+\begin{itemize}
+\item  \textbf{Login:} Form Creator must login before use the system
+\item  \textbf{Upload a form file:} After logging in, Form creator must upload a form file to add new form to the system.
+\item  \textbf{Recheck all detail and make correction:} In this step, Form creator must check all the information that system has generated and make a correction if incase of error text found.
+\item  \textbf{Select a from visibility:} Select a form visibility, whether the form creator need to form to be access by the user who signed-in or anyone can access.
+\item  \textbf{Deploy a form and Generate a link:} In this step, the form will be saved and generated a link to allow user to access.
+
+\end{itemize}
+
+
+\subsection{Signed-in user}
+
+\begin{itemize}
+\item  \textbf{Login:} If the form requires login, the user must log into the system.
+\item  \textbf{Fill out information:} Once logged in, the user going to fills out the form and submit.
+\end{itemize}
+
+
+\subsection{Non Signed-in user}
+
+\begin{itemize}
+\item  \textbf{Fill out information:} If login is not required, the user can directly fill out the form without logging in.
+\end{itemize}
+
 
 \section{System Architecture}
 
-\begin{table}[!h]
+\begin{figure}[!h]
 \centering
-\caption{test table x1}\label{tbl:symbols}
-\begin{tabular}{@{}p{0.07\textwidth}|p{0.7\textwidth}p{0.1\textwidth}}\hline
-\multicolumn{2}{l}{\textbf{SYMBOL}}  & \textbf{UNIT} \\ \hline 
-$\alpha$ & Test variable\hfill & m$^2$ \\
-$\lambda$ & Interarrival rate\hfill &  jobs/second\\
-$\mu$ & Service rate\hfill & jobs/second \\ \hline
-\end{tabular}
-%\begin{tabular}{c|c} \hline
-% $\alpha$ & $\beta$ \\ \hline
-% $\delta$ & $\mu$ \\ \hline
-%\end{tabular}
-\end{table}
+\fbox{\includegraphics[width=10cm]{./assets/system-arch.png}}
+\caption{System Architecture}\label{fig:sysarch}
+\end{figure}
 
-\section{System Specifications and Requirements}
+Figure 3.3, The diagram shown a system architecture in figure above, The System have divided into 3 part which front-end, back-end and database, each part have shown a technology stack, and here are the description of each component
 
-\section{Hardware Module 1}
-\subsection{Component 1}
-\subsection{Logical Circuit Diagram}
+\begin{itemize}
+\item  \textbf{VueJS} is a Front-end JavaScript library for building UI
+\item \textbf{TailwindCSS} is a CSS framework for styling the UI and used with React
+\item \textbf{FastAPI} is a Back-end framework for building REST API
+\item \textbf{PostgreSQL}  is a relational database
+\item \textbf{Pydantic}  is a python library used for data validation 
+\item \textbf{SQLAlchemy} is a Python base Object Relational Mapper (ORM) and SQL Tool kit
+\item \textbf{SurveyJS} is a form engine Llibrary
+\item \textbf{Meta NLLB-200} is a Model for text translation
+\item \textbf{Tesseract OCR} is a OCR for extract text from image
+\item \textbf{Llama 3.2} is a generative AI from Facebook
+\end{itemize}
 
-\section{Hardware Module 2}
-\subsection{Component 1}
-\subsection{Component 2}
-
-\section{Path Finding Algorithm}
 
 \section{Database Design}
 
-\section{GUI Design}
+Figure \ref{fig:er-diagram} shown a project database design, the system consist three tables in our project database design are user, form, and formresult. table is used to store user data, formresult is used to store a result that the user has filled out, and form table is used to store a form schema.
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width=10cm]{./assets/ER-diagram.png}}
+\caption{ER Diagram}\label{fig:er-diagram}
+\end{figure}
+
+\section{User Interface Design}
+
+\subsection{Login Page}
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/UI/Login.png}}
+\caption{Login Page}\label{fig:login}
+\end{figure}
+
+Figure 3.5 represents the login screen of the web application. This page have a email field,  password field and a login button to sent a credential to the back-end system. 
+
+\subsection{Create Your Account }
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/UI/Login.png}}
+\caption{Create Account Page}\label{fig:create-acc}
+\end{figure}
+
+Figure 3.6 represents the create account page of the web application. This page allow user to create their own account by the user must provide a following field which is name, email and password.
+
+\subsection{Forgot Password}
+
+At Figure \ref{fig:Forgot-Password} represents the create account page of the web application. When the user forgot their password, The user must navigate to this page by click at forget password from login page. And fill the email address to allow the system sent the One-time password (OTP) to email address. 
+
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/UI/forgot-password.png}}
+\caption{Forgot Password Page}\label{fig:Forgot-Password}
+\end{figure}
+
+
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/UI/Forgot-Password-Code.png}}
+\caption{Forgot Password Page}\label{fig:Forgot-Password-code}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/UI/Reset-password.png}}
+\caption{Reset Password Page}\label{fig:Reset Password}
+\end{figure}
+
+
+
+At the Figure \ref{fig:Forgot-Password-code}, It represents a OTP confirmation page which required a OTP Code that the system have send to the email address. Figure \ref{fig:Reset Password}, It represents a reset password pageIf it success the system will navigate to reset password page for enter a new password.
+
+\newpage
+\subsection{Dashboard}
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/UI/DashBoard.png}}
+\caption{Dashboard Page}\label{fig:Dashboard}
+\end{figure}
+
+Figure 3.10 represents the dashboard page, it will show all the form that user have and the add form section at the left hand side, also have a upload status while file is uploading.
+
+\subsection{Edit Form}
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/UI/edit-form.png}}
+\caption{Edit Form Page}\label{fig:edit-form}
+\end{figure}
+
+Figure 3.10 represents the Edit Form. The edit form page uses the SurveyJS library, which allows users to fully customize a form, including changing the color, adding a second page, and creating form conditions.
+
+\subsection{Form}
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/UI/.png}}
+\caption{Edit Form Page}\label{fig:edit-form}
+\end{figure}
+
+Figure 3.10 represents the Edit Form. The edit form page uses the SurveyJS library, which allows users to fully customize a form, including changing the color, adding a second page, and creating form conditions.
+
+
 
 
 
