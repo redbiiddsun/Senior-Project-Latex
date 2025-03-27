@@ -432,6 +432,85 @@ In the past, AI models like Variational Autoencoders (VAEs) and Generative Adver
 	\item \textbf{Decoder-only models} (such as GPT): Focus on predicting the next word and are good at creating new text.
 	\item \textbf{Encoder-decoder models} (such as T5): Combine both approaches and can handle tasks like summarizing or translating text.
 \end{enumerate}
+
+\subsection{Security of Web Form} Web form security is essential as these forms are highly vulnerable to cyberattacks, making them prime targets for malicious parties aiming to access sensitive user data. 
+Common threats include:
+\begin{enumerate}
+	\item \textbf{Cross-Site Scripting (XSS):} Attackers inject malicious scripts into web forms or application code, which can steal user information like keystrokes or cookies, or redirect users to harmful websites.
+	\item \textbf{SQL Injection:} Attackers manipulate SQL code within web forms to access or alter databases. This technique can expose or modify sensitive data, and it’s one of the oldest and most dangerous web vulnerabilities.
+	\item \textbf{Cross-Site Request Forgery (CSRF):} Attackers trick users into performing unintended actions, such as submitting forms or transferring data, without their knowledge. These attacks exploit the user’s browser and session data.
+	\item \textbf{Data Breaches:} A variety of attacks can lead to breaches, exposing sensitive customer information and damaging a business's reputation, as users lose trust in the website's security.
+\end{enumerate}
+
+	Many data privacy laws now regulate how web applications must ensure security, especially when handling personal information. The rules we must follow may depend on where our business is located and how it operates. To stay compliant, website owners need to adopt secure practices for web forms.
+
+\textbf{Key laws to be aware of}
+\begin{enumerate}
+	\item \textbf{GDPR (General Data Protection Regulation)}
+	\item \textbf{CCPA, CPRA (California Consumer Privacy Act and California Privacy Rights Act)}
+	\item \textbf{HIPAA (Health Insurance Portability and Accountability Act)}
+	\item \textbf{PCI DSS (Payment Card Industry Data Security Standard)}
+\end{enumerate}
+
+\textbf{Key measures for securing web forms}
+\begin{enumerate}
+	\item \textbf{Use TLS/SSL Certificates:} TLS/SSL certificates create encrypted links between browsers and servers, ensuring that data transferred is protected. Extended Validation (EV) certificates provide the highest level of security.
+	\item \textbf{Encrypt Data:} End-to-end encryption (E2EE) ensures that data is protected throughout its journey from sender to recipient, preventing unauthorized access. Use SSL certificates and CDNs to enhance security.
+	\item \textbf{Validate and Sanitize Input:} Validate and sanitize user inputs to prevent attacks like SQL injections or cross-site scripting (XSS). Validation checks if inputs are correct, while sanitization removes harmful data.
+	\item \textbf{Collect Minimal Data:} Only collect necessary information to reduce the impact of potential data breaches. This minimizes risk and aligns with privacy regulations like GDPR and CCPA.
+	\item \textbf{Anonymize Data:} Mask sensitive data (e.g., credit card numbers) using techniques like asterisks or data shuffling, making it harder for attackers to misuse it.
+	\item \textbf{Ask for Consent:} Obtain clear user consent before collecting personal data, and provide easy access to your privacy policy outlining how data is used and protected.
+	\item \textbf{Restrict File Uploads:} Limit file uploads by allowing only authorized users, setting file size limits, and using whitelist file types to prevent malware.
+	\item \textbf{Use reCAPTCHA:} Implement reCAPTCHA to differentiate between humans and bots, helping reduce spam and prevent automated attacks.
+	\item \textbf{Require Authentication:} For sensitive forms, require users to authenticate (e.g., through login or multi-factor authentication) to restrict access to authorized individuals only.
+	\item \textbf{Use Virus and Malware Protection:} Employ virus and malware protection through layered security, such as firewalls, malware scans, and intrusion detection, to safeguard your web forms from threats.
+\end{enumerate}
+
+\section{Languages and technologies}
+\subsection{Web Development Language}
+\subsubsection{HTML} HTML (HyperText Markup Language) is the standard language for creating and designing web pages. It is a markup language, which means that specific tags are used to structure web content. Each tag specifies a particular aspect of a website, such as text, photos, links, and multimedia.
+
+\subsubsection{TypeScript} TypeScript is a superset of JavaScript that introduces static typing. It was created by Microsoft to solve some of the limitations of JavaScript, particularly in large-scale applications. Because TypeScript is a superset, it supports all JavaScript features while also adding new functionalities, notably those aimed at increasing code dependability and maintenance.
+
+\subsection{Front-end Technology}
+\subsubsection{Vue.js} Vue.js is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative, component-based programming model that helps you efficiently develop user interfaces of any complexity.
+
+\subsubsection{TailwindCSS} Tailwind CSS is a utility-focused CSS framework that simplifies web development by providing pre-designed utility classes. These utility classes allow you to create custom designs.
+
+\subsubsection{SurveyJS} SurveyJS is a set of JavaScript components that allow users to build surveys, quizzes, polls, and other web forms, store them in your database, and visualize survey results in custom dashboards.
+
+\subsection{Backend Technology}
+\subsubsection{FastAPI} FastAPI is a modern web framework for creating Python APIs that prioritizes speed, ease of development, and automated validation. It has gained popularity for developing quick, high-performance APIs because it uses Python type hints to provide explicit, automatic data validation and interactive API documentation.
+
+\subsubsection{Pydantic} Pydantic is a Python data validation and parsing library that enforces data types and restrictions using Python type annotations. Although it can be used separately, it is an essential part of FastAPI. With Pydantic models, you can easily serialize data, validate incoming data, and specify the structure of your data.
+
+\subsubsection{SQLAlchemy} SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL without creating a SQL statement.
+
+\subsubsection{PostgresSQL} The PostgreSQL popular open-source relational database management system (RDBMS) for managing and storing data. It is renowned for being reliable, effective, and compliant with SQL standards. And It support storing a json format data type which it can be act as NoSQL in some situation.
+
+\subsection{Document Processing}
+\subsubsection{Python} Python Programming language is a popular high-level computer programming language for machine learning because it is simple to use and easy to read and write. Additionally, it has a fast processing speed. Web development, data analysis, automation, scientific computing, and many more topics are among the many libraries available.
+
+\subsubsection{Open Source Computer Vision Library (OpenCV)} Open Source Computer Vision Library is an open-source library designed for real-time computer vision and image processing. It provides tools for tasks such as object detection, image segmentation, facial recognition, and edge detection. OpenCV is widely used in fields like robotics, augmented reality, and machine learning.\par
+OpenCV processes image data using built-in functions for manipulating pixel values. It works with image and video formats and can be integrated with machine learning models to perform visual recognition tasks. It supports various languages, including Python
+
+\subsubsection{Tesseract OCR} Tesseract OCR is an open-source Optical Character Recognition (OCR) engine used to convert images of text into machine-encoded text. Developed by Hewlett-Packard and maintained by Google, it supports various languages and one of them is python, making it highly versatile for tasks like digitizing printed materials, extracting text from images, and enhancing accessibility in digital applications. It is commonly integrated with other image processing libraries like OpenCV to handle pre-processing tasks, improving text recognition accuracy, especially in noisy or distorted images.
+
+\subsubsection{NLLB-200} NLLB-200 (No Language Left Behind) is a project by Meta (Facebook) that focuses on creating AI models capable of translating between 200 languages.
+
+\subsubsection{PyTorch} PyTorch is an open-source deep learning framework developed by Facebook's AI Research lab (FAIR). It provides tools for building and training neural networks using dynamic computational graphs, which allow for flexibility and ease in model building.
+
+\subsubsection{LLAMA} LLama (short for Large Language Model Architecture) is a type of AI model designed to understand and generate human-like text. It is built using a transformer architecture, which helps it learn language patterns and produce meaningful responses based on its training data.
+
+\section{Competing solutions}
+\subsection{Microsoft Azure Document Intelligence}
+\begin{figure}[H]
+\centering
+\includegraphics[width=10cm]{./assets/Microsoft-Azure.jpg}
+\caption{Microsoft Azure Document Intelligence}\label{fig:figure-2.4}
+\end{figure}
+
+	Microsoft Azure Document Intelligence is a solution that provides a feature of  capturing data from printed or handwritten forms. And create a flow pipeline with Azure Cognitive Search pipeline to complete workflow as the user needs.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%CHAPTER 3 DESIGN AND METHODOLOGY%%%%%%%%%%%%%%%%
