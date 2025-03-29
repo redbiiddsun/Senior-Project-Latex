@@ -15,7 +15,6 @@
 %\XeTeXlinebreakskip = 0pt plus 1pt
 %\setmathfont(Digits)[Scale=1.0,LetterSpace=0,FakeStretch=1.0]{Times New Roman}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Customize below to suit your needs 
 % The ones that are optional can be left blank. 
@@ -214,9 +213,11 @@ $\mu$ & Service rate\hfill & jobs/second\\
 \listofvocab
 \begin{flushleft}
 \begin{tabular}{@{}p{1in}@{=\extracolsep{0.5in}}p{0.73\textwidth}}
-ABC & Adaptive Bandwidth Control \\
-MANET & Mobile Ad Hoc Network  \\
-Test & Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non condimentum purus. Pellentesque sed augue sapien. In volutpat quis diam laoreet suscipit. Curabitur fringilla sem nisi, at condimentum lectus consequat vitae.
+AI & Artificial Intelligence\\
+ML & Machine Learning  \\
+NLP & Natural Language Processing  \\
+OCR & Optical Character Recognition  \\
+UX/UI & User Interface and User Experience
 \end{tabular}
 \end{flushleft}
 
@@ -231,17 +232,7 @@ Test & Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non condi
 
 \section{Problem Statement} 
 
-<<<<<<< Updated upstream
-Nowadays, there is a shift towards digitalization, whether it is using electronic devices to record instead of using paper or storing data in a database instead of recording on paper. However, there are many things that have not been transformed to be more digital, such as official documents and business documents that are still paper or forms that have been recorded on paper before. For things that have not been developed to be more digital, we are especially interested in improving the filling of paper forms. We found that the steps in the development process that change from paper forms to web forms require developers to analyze forms, create databases, and develop web applications, which takes a lot of time and the number of developers. We see that converting paper forms to digital forms by taking pictures of the forms and the system will create a web form for them. Improving the filling of paper forms to be more digital will help reduce global warming caused by excessive paper use.
-
-\section{Potential Benefits}
-
-Potential Benefitsof this web application include improved efficiency through automated form creation, enabling the rapid digitization of paper forms and saving valuable time that can be used for other tasks, and potentially reducing costs by eliminating unnecessary labor in form processing.
-
-
-=======
 In recent year, the world has become more digitized than ever, whether it be using electronic devices for note-taking instead of paper or storing a data in a database rather than use a paper documentation, However, there are still many aspects that have not been transform to be a digital, such as a government organization that still rely on paper documentation or  the data forms that have been previously recorded on paper. However, for those that have not been developed to be digital, we were motivated to improve the efficiency of form filling. And we found that the development process from paper-based forms to web forms required developers to do an analysis of the form, create a database, and develop a front-end and backend system. Which causes a developer time to spend and resources of developers. We acknowledge this difficulty and offer a solution that converts paper forms into web form ones so that the system can automatically create a web form by just taking a picture of the form. By decreasing excessive paper use, this development in digitizing form-filling procedures will not only increase efficiency but also lessen the environmental impact and help to slow down global warming.
->>>>>>> Stashed changes
 
 \section{Objectives}
 \begin{itemize}
@@ -252,7 +243,6 @@ application
 requirements of this project.
 \item  To be the secure all data and form management website
 \end{itemize}
-
 
 \section{Scope of Work}
 
@@ -413,6 +403,23 @@ Image processing is the one technique in \textbf{Computer Vision (CV)} that is u
 \caption{OCR Process}\label{fig:figure-2.2}
 \end{figure}
 
+\subsubsection{Post OCR error correction} After Extract the text from the image, The OCR are required a post OCR error correction because the text that the OCR have extracted may not misspelling and character miss order and the post OCR have following approach.
+
+\begin{enumerate}
+	\item \textbf{Symmetric Delete Spelling Correction:} Symmetric Delete Spelling Correction is works by generating possible corrections for misspelled words using a deletion-based algorithm. First, a precomputed dictionary is built by selecting valid words and generating variations with up to N deleted characters. These variations function as keys, leading back to the correct words. When a user types a misspelled word, the algorithm generates similar deletions and looks for matches in the precomputed dictionary. If a match is found, the appropriate word is suggested.
+	
+	\item \textbf{TF-IDF and Cosine Similarity:} TF-IDF is a technique that use to change a word into number or vector and the cosine similarity is a technique that use to measure how similar between two documents, and we will use a dictionary and convert it into vector, then compare with error word and find the closest distance.
+	
+\[
+\text{TF-IDF}(t, d) = \text{TF}(t, d) \times \text{IDF}(t)
+\] \\
+	
+\[
+\text{Cosine Similarity} = \frac{\sum_{i=1}^{n} A_i B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \times \sqrt{\sum_{i=1}^{n} B_i^2}}
+\]
+
+\end{enumerate}
+
 \subsection{Natural Language Processing (NLP)} Natural Language Processing (NLP) enables machines to understand, interpret, and generate human language in a valuable way. The process involves several key techniques: Tokenization: Breaking down text into smaller units (tokens), such as words or phrases, which can be analyzed separately. Stop Word Removal: Eliminates common words that provide little informational value, focusing on more meaningful words. Lemmatization and Stemming: Reduces words to their root forms to unify different inflected versions (e.g., "walking" becomes "walk"). Part-of-Speech Tagging: Assigns tags to words based on their grammatical roles (nouns, verbs, adjectives, etc.).
 
 \subsection{Deep Learning} Deep Learning is a type of machine learning where computers are trained to think and learn like humans by processing large amounts of data. It uses a special kind of program called a neural network, which is inspired by the way our brains work. These networks can figure out patterns and make decisions on their own, such as recognizing faces in photos, translating languages, or even predicting what you might want to buy.
@@ -547,7 +554,7 @@ The Form Schema generator System will receive information from the Paper-Based F
 
 \subsubsection{Web Form System}
 
-The Digital Form System must enable users to complete the form, store the data in the database, and see the data created by the form owner.
+The Web Form System must enable users to complete the form, store the data in the database, and see the data created by the form owner.
 
 \subsubsection{Registration and Authentication System}
 
@@ -837,36 +844,114 @@ Figure \ref{fig:form-page} showcases the example of web form user interface, whi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Experiments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Implementation Results}
+\chapter{Implementation Result}
 
-You can title this chapter as \textbf{Preliminary Results} or \textbf{Work Progress} for the progress reports. Present implementation or experimental results here and discuss them.
+This chapter will cover all the working process and implementation progress of our project. also address problems that are challenging. And we will divided each topic by features
+
+\section{Paper-Based Form Analysis System}
+
+The Paper-Based Form Analysis System is mainly focused on extracting a text from the image or file, and analyzing a form layout to identify an input label in the text, also the translation part and data type generator by using generative AI.
+
+\subsection{Text Extraction Feature}
+The Text Extraction we have separate into 2 major components which is extraction from image and extraction from PDF. Both of them were implemented already, but there are a problem with the extract text from image because we have use optical character recognition technique and Figure \ref{fig:ocr-result} is a result of the extraction from image, which  contains multiple OCR inaccuracies that affect the readability and accuracy of the extracted text.Character recognition errors are present, where the letter, number and special character are misidentified, such as confusing "O" with "0" or "I" with "1,". And the extraction from PDF is using a PyPlumber to extract text, and the result is working correctly as Figure \ref{fig:pdf-result}.
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/ocr-result.png}}
+\caption{OCR Text Extraction Result}\label{fig:ocr-result}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/pdf-extract.png}}
+\caption{PDF Text Extraction Result}\label{fig:pdf-result}
+\end{figure}
+
+\subsection{Form Parse}
+The Form Parse is implemented to identify an input label of the form and separate a form title. we have tested a several form and the result of form parse was 
+great but there are some minor defects, if the extracted text does not match with the pattern algorithm that we design, so some labels may be missing.
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/form-parse.png}}
+\caption{Form Parse Result}\label{fig:Form-Parse}
+\end{figure}
+
+\subsection{Translation Thai to English}
+The Translation is use to translate a Thai language input label to english. we have use a NLLB-200 fined tuned model. Figure \ref{fig:trans-result} below show that the translation is working correctly but may not it may get a text that we expect, such as วันเกิด expected value is Date of Birth, but the predicted result show "Birthdate". which it have ability to translate into a correct meaning.
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/translation-result.png}}
+\caption{Translation Result}\label{fig:trans-result}
+\end{figure}
+
+\subsection{Data Type Analyzer}
+Figure \ref{fig:datatype-result} has shown the 3 simple test case result that input the array of text and the system will generate a json as output. And it show a correct result for 1 and 2, but the 3 has failed because we have input a Thai text and some field are not correct as expect result.
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/datatype-result.png}}
+\caption{Data Type Analyzer Result}\label{fig:datatype-result}
+\end{figure}
 
 
-ALL SECTIONS IN THIS CHAPTER ARE OPTIONAL. PLEASE CONSULT YOU ADVISOR AND DESIGN YOUR OWN SECTION
+\section{Web Application Implementation}
 
-\emph{\textthai{หัวข้อต่าง ๆ ในแต่ละบทเป็นเพียงตัวอย่างเท่านั้น หัวข้อที่จะใส่ในแต่ละบทขึ้นอยู่กับโปรเจคของนักศึกษาและอาจารย์ที่ปรึกษา}}
+The web application development is progressing well, with significant milestones achieved in the front-end implementation. The following features have been successfully developed and tested with a responsive user interface.
+
+\textbf{Authentication System:} Includes Login, Sign-Up, and Forgot Password pages.
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/auth-login.png}}
+\caption{Implemented Login Page}\label{fig:auth-login}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/auth-signup.png}}
+\caption{Implemented Signup Page}\label{fig:auth-signup}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/auth-forgotpasswd.png}}
+\caption{Implemented Forgot Passowrd}\label{fig:auth-forgotpasswd}
+\end{figure}
+
+\textbf{Dashboard Page:} Dashboard Page: Fully implemented with necessary functionalities,  such as upload files, status files upload, and recent form display with search by keyword.
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/dashboard.png}}
+\caption{Implemented Dashboard Page}\label{fig:dashboard-result}
+\end{figure}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Conclusions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Conclusions}
+%\chapter{Conclusions}
 
- \begin{figure}[!h]
-\caption{This is how you mention when figure come from internet  \href{https://www.google.com} {https://www.google.com}}\label{fig:x1}
-\end{figure}
+ %\begin{figure}[!h]
+%\caption{This is how you mention when figure come from internet  \href{https://www.google.com} {https://www.google.com}}\label{fig:x1}
+%\end{figure}
 
-This chapter is optional for proposal and progress reports but 
-is required for the final report.
+%This chapter is optional for proposal and progress reports but 
+%is required for the final report.
 
-THIS IS AN EXAMPLE. ALL SECTIONS BELOW ARE OPTIONAL. PLEASE CONSULT YOU ADVISOR AND DESIGN YOUR OWN SECTION
+%THIS IS AN EXAMPLE. ALL SECTIONS BELOW ARE OPTIONAL. PLEASE CONSULT YOU ADVISOR AND DESIGN YOUR OWN SECTION
 
-\emph{\textthai{หัวข้อต่าง ๆ ในแต่ละบทเป็นเพียงตัวอย่างเท่านั้น หัวข้อที่จะใส่ในแต่ละบทขึ้นอยู่กับโปรเจคของนักศึกษาและอาจารย์ที่ปรึกษา}}
+%\emph{\textthai{หัวข้อต่าง ๆ ในแต่ละบทเป็นเพียงตัวอย่างเท่านั้น หัวข้อที่จะใส่ในแต่ละบทขึ้นอยู่กับโปรเจคของนักศึกษาและอาจารย์ที่ปรึกษา}}
 
-\section{Problems and Solutions}
-State your problems and how you fixed them.
+%\section{Problems and Solutions}
+%State your problems and how you fixed them.
 
-\section{Future Works}
-What could be done in the future to make your projects better.
+%\section{Future Works}
+%What could be done in the future to make your projects better.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -888,116 +973,5 @@ What could be done in the future to make your projects better.
 
 \bibliographystyle{kmutt}
 \bibliography{string,cpe}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%% Appendix %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\appendix{First appendix title}
-\noindent{\large\bf Put appropriate topic here} \\
-
-This is where you put hardware circuit diagrams, detailed experimental data in tables or source codes, etc.. \\ \bigskip
-
- \begin{figure}[!h]
-\caption{This is the figure x11 \href{https://www.google.com} {https://www.google.com}}\label{fig:x1}
-\end{figure}
-
-This appendix describes two static allocation methods for fGn (or fBm)
-traffic. Here, $\lambda$ and $C$ are respectively the traffic arrival
-rate and the service rate per dimensionless time step. Their unit are
-converted to a physical time unit by multiplying the step size
-$\Delta$. For a fBm self-similar traffic source,
-Norros~\cite{norros95} provides its EB as
-\begin{equation}\label{eq:norros}
-  C = \lambda + (\kappa(H)\sqrt{-2\ln\epsilon})^{1/H}a^{1/(2H)}x^{-(1-H)/H}\lambda^{1/(2H)}
-\end{equation}
-where $\kappa(H) = H^H(1-H)^{(1-H)}$. Simplicity in the calculation is
-the attractive feature of (\ref{eq:norros}).
-
-The MVA technique developed in~\cite{kim01} so far provides the most
-accurate estimation of the loss probability compared to previous
-bandwidth allocation techniques according to simulation results.
-Consider a discrete-time queueing system with constant service rate
-$C$ and input process $\lambda_n$ with $\mathbb{E}\{\lambda_n\} =
-\lambda$ and $\mathrm{Var}\{\lambda_n\} = \sigma^2$.  Define $X_n \equiv
-\sum_{k=1}^n \lambda_k - Cn$.  The loss probability due to the MVA
-approach is given by
-\begin{equation}\label{eq:loss_mva}
-  \varepsilon \approx \alpha e^{-m_x/2}
-\end{equation}
-where
-\begin{equation}\label{eq:mx}
-m_x = \min_{n \geq 0} \frac{((C-\lambda)n + B)^2}{\mathrm{Var}\{X_n\}} =
-\frac{((C-\lambda)n^\ast + B)^2}{\mathrm{Var}\{X_{n^{\ast}}\}}
-\end{equation} 
-and 
-\begin{equation}\label{eq:alpha}
-  \alpha =
-  \frac{1}{\lambda\sqrt{2\pi\sigma^2}}\exp\left(\frac{(C-\lambda)^2}{2\sigma^2}\right)
-  \int_C^\infty (r-C)\exp\left(\frac{(r-\lambda)^2}{2\sigma^2}\right)\, dr
-\end{equation}
-For a given $\varepsilon$, we numerically solve for $C$ that satisfies
-(\ref{eq:loss_mva}). Any search algorithm can be used to do the task.
-Here, the bisection method is used.  
-
-Next, we show how $\mathrm{Var}\{X_n\}$ can be determined.  Let
-$C_{\lambda}(l)$ be the autocovariance function of $\lambda_n$.  The
-MVA technique basically approximates the input process $\lambda_n$
-with a Gaussian process, which allows $\mathrm{Var}\{X_n\}$ to be
-represented by the autocovariance function.  In particular, the
-variance of $X_n$ can be expressed in terms of $C_{\lambda}(l)$ as
-\begin{equation}
-  \mathrm{Var}\{X_n\} = nC_{\lambda}(0) + 2\sum_{l=1}^{n-1} (n-l)C_{\lambda}(l)
-\end{equation} 
-Therefore, $C_{\lambda}(l)$ must be known in the MVA technique, either
-by assuming specific traffic models or by off-line analysis in case of
-traces.  In most practical situations, $C_{\lambda}(l)$ will not be
-known in advance, and an on-line measurement algorithm developed
-in~\cite{eun01} is required to jointly determine both $n^\ast$ and
-$m_x$. For fGn traffic, $\mathrm{Var}\{X_n\}$ is equal to $\sigma^2
-n^{2H}$, where $\sigma^2 = \mathrm{Var}\{\lambda_n\}$, and we can find
-the $n^\ast$ that minimizes (\ref{eq:mx}) directly. Although $\lambda$
-can be easily measured, it is not the case for $\sigma^2$ and $H$.
-Consequently, the MVA technique suffers from the need of prior
-knowledge traffic parameters.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%% The 2nd appendix %%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\appendix{Second appendix title}
-\noindent{\large\bf Put appropriate topic here} \\
-
-
- \begin{figure}[!h]
-\caption{This is the figure x11 \href{https://www.google.com} {https://www.google.com}}\label{fig:x1}
-\end{figure}
-
-Next, we show how $\mathrm{Var}\{X_n\}$ can be determined.  Let
-$C_{\lambda}(l)$ be the autocovariance function of $\lambda_n$.  The
-MVA technique basically approximates the input process $\lambda_n$
-with a Gaussian process, which allows $\mathrm{Var}\{X_n\}$ to be
-represented by the autocovariance function.  In particular, the
-variance of $X_n$ can be expressed in terms of $C_{\lambda}(l)$ as
-\begin{equation}
-  \mathrm{Var}\{X_n\} = nC_{\lambda}(0) + 2\sum_{l=1}^{n-1} (n-l)C_{\lambda}(l)
-\end{equation} 
-
-\noindent{\large\bf Add more topic as you need} \\
-
-Therefore, $C_{\lambda}(l)$ must be known in the MVA technique, either
-by assuming specific traffic models or by off-line analysis in case of
-traces.  In most practical situations, $C_{\lambda}(l)$ will not be
-known in advance, and an on-line measurement algorithm developed
-in~\cite{eun01} is required to jointly determine both $n^\ast$ and
-$m_x$. For fGn traffic, $\mathrm{Var}\{X_n\}$ is equal to $\sigma^2
-n^{2H}$, where $\sigma^2 = \mathrm{Var}\{\lambda_n\}$, and we can find
-the $n^\ast$ that minimizes (\ref{eq:mx}) directly. Although $\lambda$
-can be easily measured, it is not the case for $\sigma^2$ and $H$.
-Consequently, the MVA technique suffers from the need of prior
-knowledge traffic parameters. 
-
-
-
-
 
 \end{document}
