@@ -343,9 +343,11 @@ Image processing is the one technique in \textbf{Computer Vision (CV)} that is u
 \subsubsection{Segmentation} The main goal of image segmentation is to divide an image into distinct parts that match real objects or areas in the picture. This process separates important pixels from the rest of the image, resulting in sections that cover the entire image or outlines of objects.
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=10cm]{./assets/segmentation.jpg}
-\caption{Image Segmentation Explained}\label{fig:figure-2.1}
+    \centering
+    \includegraphics[width=10cm]{./assets/segmentation.jpg}
+    \caption{Image Segmentation Explained from 
+    \href{https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/1_image-segmentation\%202.jpeg}{Builtin.com}.}
+    \label{fig:figure-2.1}  
 \end{figure}
 
 \begin{enumerate}
@@ -400,7 +402,10 @@ Image processing is the one technique in \textbf{Computer Vision (CV)} that is u
 \begin{figure}[H]
 \centering
 \includegraphics[width=10cm]{./assets/OCR-Process.png}
-\caption{OCR Process}\label{fig:figure-2.2}
+\caption{OCR Process}
+\caption{OCR Process from 
+\href{https://www.researchgate.net/profile/Adrian-Gomez-9/publication/281099638/figure/fig4/AS:614266293997575@1523463905255/Architecture-diagram-for-the-OCR-alternative.png}{Researchgate.net}.}
+\label{fig:figure-2.2}
 \end{figure}
 
 \subsubsection{Post OCR error correction} After Extract the text from the image, The OCR are required a post OCR error correction because the text that the OCR have extracted may not misspelling and character miss order and the post OCR have following approach.
@@ -427,7 +432,9 @@ Image processing is the one technique in \textbf{Computer Vision (CV)} that is u
 \begin{figure}[H]
 \centering
 \includegraphics[width=10cm]{./assets/Natural-Network.png}
-\caption{Natural Network}\label{fig:figure-2.3}
+\label{fig:figure-2.3}
+\caption{Natural Network from 
+\href{https://www.qtravel.ai/wp-content/uploads/2023/07/sieci-neuronowe-grafika-768x570.png}{Qtravel.ai}.}
 \end{figure}
 
 \subsection{Generative AI} Generative AI refers to deep learning models that can generate high-quality text, images, and other content based on trained data.  It works by analyzing a lot of data, such as Wikipedia articles or famous paintings, and then using what it learns to produce original outputs similar to the data it studied. \par
@@ -514,7 +521,9 @@ OpenCV processes image data using built-in functions for manipulating pixel valu
 \begin{figure}[H]
 \centering
 \includegraphics[width=10cm]{./assets/Microsoft-Azure.jpg}
-\caption{Microsoft Azure Document Intelligence}\label{fig:figure-2.4}
+\caption{Microsoft Azure Document Intelligence from 
+\href{https://learn.microsoft.com/th-th/training/achievements/extract-data-from-forms-use-form-recognizer.svg}{Learn.microsoft.com}.}
+\label{fig:figure-2.4}  
 \end{figure}
 
 	Microsoft Azure Document Intelligence is a solution that provides a feature of  capturing data from printed or handwritten forms. And create a flow pipeline with Azure Cognitive Search pipeline to complete workflow as the user needs.
@@ -745,9 +754,47 @@ Figure \ref{fig:system-arch}, The diagram shown a system architecture in figure 
 \end{itemize}
 
 
+\section{System Worflow}
+
+\subsection{Extracting text and text parse}
+
+\subsubsection{Extracting text}
+
+Extracting text is the first process after the user has uploaded a file via the web application, this step is going to extracting text from the file by using an OCR technique for images, but If the user has provided a PDF file, the system will use a PDF library, such as PyMuPDF or Pdfplumber to extract a text and the layout. The OCR technique requires additional steps because we must pre-process the image using a black-and-white scale, and enhance its quality and clarity before the OCR process can begin. A text will be returned by the system once the process is complete.
+
+\subsubsection{Text Parse}
+
+Text parsing is the second process after the extracted text has been completed. Text parse is the process of analyzing a text and breaking down the text to convert it into a structured format, In this process, the purpose of text parse is to analyze the layout of the form, by using a text from a previous process to identify where which text is the label of the input field. The text parse algorithm starts by separating the text from each line and analyzing it line by line, If there is a word in front of the small point the text parse will mark the text as an input label, but if the line starts with the small point the parse will look back to the previous line to check whether if there any text that matches with the condition that parse has.
+
+\subsubsection{Text Error Correction}
+
+Text Error Correction is the third process after extracting text and text parse, respectively. Text error correction is identifying and fixing errors in a given text. Text error correction includes spelling mistakes, grammatical errors, punctuation issues, and incorrect word usage. In this process, the text error correction focuses on spelling mistakes and vowel missed order, To make a correction, the first step is to tokenize the whole word into a single word and check the word with a dictionary, If the word does not exist then the system will mark it as an error like this "<ERROR>Wolrd</ERROR>". The system will correct the word with a cosine similarity technique, the technique will convert a dictionary into a vector and also an error text. It will rank with cosine similarity, then it will take the first rank to replace a text. This process is required only for the user who uploads an image.
+
+\subsection{AI Model}
+
+\subsubsection{Translation}
+
+Translation is the fourth process and the first process that AI have involve in the project. Translation is the process of  translate a Thai text to English text by using No Language Left Behind (NLLB) from meta, which the model is aim for high-quality translations directly between 200 languages. And we have selected a fine-tuned version of NLLB, which is wtarit/nllb-600M-th-en model and use it via hugging face transformer.
+
+\subsubsection{Data Type Generator}
+
+The Data Type Generator is the fifth process after preparing the process before the data type generator. The Data type generator is designed to generate a suitable datatype of each input field, for example, birthdate must be Date instead of string, passport number must be string, or text instead of number. All of these types will be applied with the form schema to make a form able to validate a correct data input. The data type generator is going to use a Llama 3 for prompt and generate a schema, and it will use an ollama as an interface for connecting to and communicating with the Llama 3 local model.
+
+\subsection{Form Schema Generator}
+
+The Form Schema Generator is the last process of the flow, the form schema generator will be used to generate a form schema from the output received from the data type generator to show output on the webpage and interact with the user.
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width=10cm]{./assets/system-flow.png}}
+\caption{System Workflow Diagram}\label{fig:system-workflow}
+\end{figure}
+
+
+
 \section{Database Design}
 
-Figure \ref{fig:er-diagram} shown a project database design, the system consist three tables in our project database design are user, form, and formresult. table is used to store user data, formresult is used to store a result that the user has filled out, and form table is used to store a form schema.
+Figure \ref{fig:er-diagram} shown a project database design, the system consist three tables in our project database design are user, form, and form result. table is used to store user data, form result is used to store a result that the user has filled out, and form table is used to store a form schema.
 
 \begin{figure}[!h]
 \centering
@@ -878,7 +925,7 @@ great but there are some minor defects, if the extracted text does not match wit
 \end{figure}
 
 \subsection{Translation Thai to English}
-The Translation is use to translate a Thai language input label to english. we have use a NLLB-200 fined tuned model. Figure \ref{fig:trans-result} below show that the translation is working correctly but may not it may get a text that we expect, such as วันเกิด expected value is Date of Birth, but the predicted result show "Birthdate". which it have ability to translate into a correct meaning.
+The Translation is use to translate a Thai language input label to english. we have use a NLLB-200 fined tuned model. Figure \ref{fig:trans-result} below show that the translation is working correctly but may not it may get a text that we expect, such as \textthai{วันเกิด} expected value to be Date of Birth, but the predicted result show "Birthdate". which it have ability to translate into a correct meaning.
 
 \begin{figure}[H]
 \centering
@@ -927,9 +974,6 @@ The web application development is progressing well, with significant milestones
 \fbox{\includegraphics[width= 10cm]{./assets/dashboard.png}}
 \caption{Implemented Dashboard Page}\label{fig:dashboard-result}
 \end{figure}
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Conclusions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
