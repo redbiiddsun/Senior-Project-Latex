@@ -1,44 +1,150 @@
 \begin{thebibliography}{1}
 
-\bibitem{santi05b}
-P.~Santi,
-\newblock  2005, {\bf Topology Control in Wireless Ad Hoc and Sensor Networks},
-\newblock Wiley,
-\newblock p.133.
+\bibitem{ditto}
+Ditto Thailand,
+\newblock n.d., How going paperless can help government agencies,''
+\newblock Ditto Thailand,
+\newblock Available at \url{https://www.dittothailand.com/dittonews/gov-how-paperless-can-help-government-agencies/},
+\newblock [Online; accessed 10-October-2024].
 
-\bibitem{bworld}
-Ingo Lütkebohle,  2008,
-\newblock ``{BWorld Robot Control Software \textthai{ทดสอบ}},''
-  Available at
-  \href{http://aiweb.techfak.uni-bielefeld.de/content/bworld-robot-control-software-ทดสอบ/}
-  {\textthai{http://aiweb.techfak.uni-bielefeld.de/content/bworld-robot-control-software-ทดสอบ/}},
-\newblock [Online; accessed 19-July-2008].
+\bibitem{ahmed23}
+S. Ahmed and H. Rashid,
+\newblock 2023, ``Research paper on artificial intelligence and its applications,''
+\newblock ResearchGate,
+\newblock Available at \url{https://www.researchgate.net/publication/377897946_Research_Paper_On_Artificial_Intelligence_And_It's_Applications},
+\newblock [Online; accessed 10-October-2024].
 
-\bibitem{hypersense}
-Hypersense,  2020,
-\newblock ``{Is the virtual celebrity industry still on the rise in 2020? },''
-  Available at
-  \url{https://arvrjourney.com/is-the-virtual-celebrity-industry-still-on-the-rise-in-2020-60cfd2b2c315},
-\newblock [Online; accessed 26-August-2020].
+\bibitem{smith24}
+J. Smith,
+\newblock 2024, ``What is machine learning?''
+\newblock ResearchGate,
+\newblock Available at \url{https://www.researchgate.net/publication/373015635_What_is_Machine_Learning},
+\newblock [Online; accessed 10-October-2024].
 
-\bibitem{norros95}
-I.~Norros,
-\newblock  1995, ``On the use of Fractional Brownian Motion in the Theory of
-  Connectionless Networks,''
-\newblock {\bf IEEE J. Select. Areas Commun.}, vol. 13, no. 6, pp. 953--962,
-  Aug. 1995.
+\bibitem{techtarget}
+TechTarget,
+\newblock n.d., ``What is natural language processing (NLP)?''
+\newblock TechTarget,
+\newblock Available at \url{https://www.techtarget.com/searchenterpriseai/definition/natural-language-processing-NLP},
+\newblock [Online; accessed 10-October-2024].
 
-\bibitem{kim01}
-H.S. Kim and N.B. Shroff,
-\newblock  2001, ``Loss Probability Calculations and Asymptotic Analysis for
-  Finite Buffer Multiplexers,''
-\newblock {\bf IEEE/ACM Trans. Networking}, vol. 9, no. 6, pp. 755--768, Dec.
-  2001.
+\bibitem{pujari18}
+S. Pujari and M. Srinivas,
+\newblock 2018, ``Computer vision and image processing: A paper review,''
+\newblock ResearchGate,
+\newblock Available at \url{https://www.researchgate.net/publication/323106814_Computer_Vision_and_Image_Processing_A_Paper_Review},
+\newblock [Online; accessed 10-October-2024].
 
-\bibitem{eun01}
-D.Y. Eun and N.B. Shroff,  2001,
-\newblock ``A Measurement-Analytic Framework for QoS Estimation Based on the
-  Dominant Time Scale,''
-\newblock in {\bf Proc. IEEE INFOCOM'01}, Anchorage, AK, Apr. 2001.
+\bibitem{singh16}
+R. Singh and P. Goyal,
+\newblock 2016, ``A review on image processing,''
+\newblock ResearchGate,
+\newblock Available at \url{https://www.researchgate.net/publication/271770488_A_Review_on_Image_Processing},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{pujari20}
+S. Pujari and D. Ramesh,
+\newblock 2020, ``Image processing: What, how, and future,''
+\newblock ResearchGate,
+\newblock Available at \url{https://www.researchgate.net/publication/343771072_Image_Processing_What_How_and_Future},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{gokcen20}
+A. Gokcen,
+\newblock 2020, ``What is image enhancement?''
+\newblock Medium,
+\newblock Available at \url{https://medium.com/@gokcenazakyol/what-is-image-enhancement-image-processing-3-32a813087e0a},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{kumar12}
+S. Kumar,
+\newblock 2012, ``Automatic text processing machine learning techniques,''
+\newblock ResearchGate,
+\newblock Available at \url{https://www.researchgate.net/publication/236667720_AUTOMATIC_TEXT_PROCESSING_MACHINE_LEARNING_TECHNIQUES},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{miller22}
+J. Miller,
+\newblock 2022, ``Optical character recognition (OCR),''
+\newblock ResearchGate,
+\newblock Available at \url{https://www.researchgate.net/publication/360620085_OPTICAL_CHARACTER_RECOGNITION},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{smithgoogle14}
+J. Smith and Google AI,
+\newblock 2014, ``Tesseract OCR,''
+\newblock Google,
+\newblock Available at \url{https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/33418.pdf},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{chen20}
+Q. Chen,
+\newblock 2020, ``T5: A detailed explanation,''
+\newblock Medium,
+\newblock Available at \url{https://medium.com/analytics-vidhya/t5-a-detailed-explanation-a0ac9bc53e51},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{sqlalchemy}
+SQLAlchemy,
+\newblock n.d., ``SQLAlchemy,''
+\newblock Available at \url{https://www.sqlalchemy.org/},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{fastapi}
+FastAPI,
+\newblock n.d., ``FastAPI documentation,''
+\newblock Available at \url{https://fastapi.tiangolo.com/},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{vuejs}
+Vue.js,
+\newblock n.d., ``Introduction to Vue.js,''
+\newblock Available at \url{https://vuejs.org/},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{gfg}
+GeeksforGeeks,
+\newblock n.d., ``Introduction to Tailwind CSS,''
+\newblock Available at \url{https://www.geeksforgeeks.org/introduction-to-tailwind-css/},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{surveyjs}
+SurveyJS,
+\newblock n.d., ``Introduction to SurveyJS Docs,''
+\newblock Available at \url{https://surveyjs.io/},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{pujari16}
+S. Pujari,
+\newblock 2016, ``OpenCV for computer vision applications,''
+\newblock ResearchGate,
+\newblock Available at \url{https://www.researchgate.net/publication/301590571_OpenCV_for_Computer_Vision_Applications},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{raffel20}
+C. Raffel et al.,
+\newblock 2020, ``Text-to-Text Transfer Transformer (T5),''
+\newblock arXiv,
+\newblock Available at \url{https://arxiv.org/abs/1910.10683v4},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{paszke19}
+A. Paszke et al.,
+\newblock 2019, ``PyTorch: An imperative style, high-performance deep learning library,''
+\newblock arXiv,
+\newblock Available at \url{https://arxiv.org/abs/1912.01703},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{sitelock}
+SiteLock,
+\newblock n.d., ``Web form security guide,''
+\newblock Available at \url{https://www.sitelock.com/blog/web-form-security-guide/},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{microsoft}
+Microsoft,
+\newblock n.d., ``Extract data from forms with Document Intelligence,''
+\newblock Available at \url{https://learn.microsoft.com/th-th/training/paths/extract-data-from-forms-document-intelligence/},
+\newblock [Online; accessed 9-December-2024].
 
 \end{thebibliography}
