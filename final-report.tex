@@ -112,9 +112,7 @@
 
 
 \begin{document}
-\pdfstringdefDisableCommands{%
-\let\MakeUppercase\relax
-}
+\pdfstringdefDisableCommands{\let\MakeUppercase\relax}
 \begin{center}
   \includegraphics[width=2.8cm]{logo02.jpg}
 \end{center}
@@ -189,10 +187,11 @@ Finally, we would like to express our thanks to everyone, including our family, 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The three commands below automatically generate the table 
 % of content, list of tables and list of figures
-\tableofcontents                    
+\tableofcontents
+                    
 \listoftables
-\listoffigures                      
 
+\listoffigures                      
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%% List of symbols page %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -201,9 +200,9 @@ Finally, we would like to express our thanks to everyone, including our family, 
 \begin{flushleft}
 \begin{tabular}{@{}p{0.07\textwidth}p{0.7\textwidth}p{0.1\textwidth}}
 \textbf{SYMBOL}  & & \textbf{UNIT} \\[0.2cm]
-$\alpha$ & Test variable\hfill & m$^2$ \\
-$\lambda$ & Interarival rate\hfill &  jobs/second\\
-$\mu$ & Service rate\hfill & jobs/second\\
+%$\alpha$ & Test variable\hfill & m$^2$ \\
+%$\lambda$ & Interarival rate\hfill &  jobs/second\\
+%$\mu$ & Service rate\hfill & jobs/second\\
 \end{tabular}
 \end{flushleft}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -373,6 +372,7 @@ Image processing is the one technique in \textbf{Computer Vision (CV)} that is u
 	    	\item \textbf{Lossless Compression:} No information is lost during compression.
 	    	\item \textbf{Lossy Compression:} Accepts some loss of information for higher compression rates.
 	\end{enumerate}
+	\newpage %%%ขึ้นหน้าใหม่%%%
 	\item \textbf{Morphological Image Processing:} This technique focuses on extracting and analyzing the shape and structure of objects within an image. Common morphological operators include:
 	\begin{enumerate}
 		\item Boundary extraction
@@ -412,12 +412,12 @@ Image processing is the one technique in \textbf{Computer Vision (CV)} that is u
 
 \begin{enumerate}
 	\item \textbf{Symmetric Delete Spelling Correction:} Symmetric Delete Spelling Correction is works by generating possible corrections for misspelled words using a deletion-based algorithm. First, a precomputed dictionary is built by selecting valid words and generating variations with up to N deleted characters. These variations function as keys, leading back to the correct words. When a user types a misspelled word, the algorithm generates similar deletions and looks for matches in the precomputed dictionary. If a match is found, the appropriate word is suggested.
-	
+\newpage %%%ขึ้นหน้าใหม่%%%	
 	\item \textbf{TF-IDF and Cosine Similarity:} TF-IDF is a technique that use to change a word into number or vector and the cosine similarity is a technique that use to measure how similar between two documents, and we will use a dictionary and convert it into vector, then compare with error word and find the closest distance.
 	
 \[
 \text{TF-IDF}(t, d) = \text{TF}(t, d) \times \text{IDF}(t)
-\] \\
+\]
 	
 \[
 \text{Cosine Similarity} = \frac{\sum_{i=1}^{n} A_i B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \times \sqrt{\sum_{i=1}^{n} B_i^2}}
@@ -465,7 +465,7 @@ Common threats include:
 	\item \textbf{HIPAA (Health Insurance Portability and Accountability Act)}
 	\item \textbf{PCI DSS (Payment Card Industry Data Security Standard)}
 \end{enumerate}
-
+\newpage %%%ขึ้นหน้าใหม่%%%
 \textbf{Key measures for securing web forms}
 \begin{enumerate}
 	\item \textbf{Use TLS/SSL Certificates:} TLS/SSL certificates create encrypted links between browsers and servers, ensuring that data transferred is protected. Extended Validation (EV) certificates provide the highest level of security.
@@ -504,7 +504,7 @@ Common threats include:
 
 \subsection{Document Processing}
 \subsubsection{Python} Python Programming language is a popular high-level computer programming language for machine learning because it is simple to use and easy to read and write. Additionally, it has a fast processing speed. Web development, data analysis, automation, scientific computing, and many more topics are among the many libraries available.
-
+\newpage %%%ขึ้นหน้าใหม่%%%
 \subsubsection{Open Source Computer Vision Library (OpenCV)} Open Source Computer Vision Library is an open-source library designed for real-time computer vision and image processing. It provides tools for tasks such as object detection, image segmentation, facial recognition, and edge detection. OpenCV is widely used in fields like robotics, augmented reality, and machine learning.\par
 OpenCV processes image data using built-in functions for manipulating pixel values. It works with image and video formats and can be integrated with machine learning models to perform visual recognition tasks. It supports various languages, including Python
 
@@ -584,7 +584,7 @@ From the figure \ref{fig:use-case} The diagram shows a relationship between the 
 
 \subsection{Autentication}
 
-\textbf{Use Case Name:} Autentication \\
+\noindent\textbf{Use Case Name:} Autentication \\
 \textbf{Actors:} Form Creator and Required Login User \\
 \textbf{Goal:} Users log in to the system. \\
 \textbf{Preconditions:} User is registered
@@ -598,9 +598,11 @@ Main Success Scenario:
     \item System authenticate and navigate to the home page.
 \end{enumerate}
 
+\newpage
+
 \subsection{Register}
 
-\textbf{Use Case Name:} Register \\
+\noindent\textbf{Use Case Name:} Register \\
 \textbf{Actors:} Form Creator and Required Login User \\
 \textbf{Goal:} Users register to a system. \\
 \textbf{Preconditions:} User does not have an account
@@ -618,7 +620,7 @@ Main Success Scenario:
 
 \subsection{Create a form}
 
-\textbf{Use Case Name:} Create a form \\
+\noindent\textbf{Use Case Name:} Create a form \\
 \textbf{Actors:} Form Creator\\
 \textbf{Goal:} Create a form by upload the form file. \\
 \textbf{Preconditions:} User has logged in.
@@ -635,7 +637,7 @@ Main Success Scenario:
 
 \subsection{Edit a form}
 
-\textbf{Use Case Name:} Edit a form \\
+\noindent\textbf{Use Case Name:} Edit a form \\
 \textbf{Actors:} Form Creator\\
 \textbf{Goal:} Edit a form to make a change.\\
 \textbf{Preconditions:} User has logged in.
@@ -653,7 +655,7 @@ Main Success Scenario:
 
 \subsection{View a form data}
 
-\textbf{Use Case Name:} View a form data \\
+\noindent\textbf{Use Case Name:} View a form data \\
 \textbf{Actors:} Form Creator\\
 \textbf{Goal:}View the data that user have input\\
 \textbf{Preconditions:} User has logged in.
@@ -668,7 +670,7 @@ Main Success Scenario:
 
 \subsection{Fill up the form}
 
-\textbf{Use Case Name:} Fill up the form \\
+\noindent\textbf{Use Case Name:} Fill up the form \\
 \textbf{Actors:} Required Login Users and Anonymous User \\
 \textbf{Goal:} Add a new data to the form \\
 \textbf{Preconditions:} User has logged in or non-login user.
@@ -689,6 +691,7 @@ Alternate scenario (user access the form required a login without login):
     \item System will navigate to the login page After login completes the user will redirect back to the form page.
 \end{enumerate}
 
+\newpage
 
 \section{Activity Diagram}
 
@@ -701,8 +704,6 @@ Traditional Form Converter System is working.
 \caption{Activity Diagram}\label{fig:activity-diagram}
 \end{figure}
 
-
-\newpage
 \subsection{Form creator}
 
 \begin{itemize}
@@ -729,6 +730,7 @@ Traditional Form Converter System is working.
 \item  \textbf{Fill out information:} If login is not required, the user can directly fill out the form without logging in.
 \end{itemize}
 
+\newpage
 
 \section{System Architecture}
 
@@ -790,7 +792,7 @@ The Form Schema Generator is the last process of the flow, the form schema gener
 \caption{System Workflow Diagram}\label{fig:system-workflow}
 \end{figure}
 
-
+\newpage
 
 \section{Database Design}
 
@@ -820,7 +822,7 @@ Figure \ref{fig:login} represents the login screen of the web application. This 
 
 \begin{figure}[!h]
 \centering
-\fbox{\includegraphics[width= 10cm]{./assets/UI/Login.png}}
+\fbox{\includegraphics[width= 10cm]{./assets/UI/Sign-Up.png}}
 \caption{Create Account Page}\label{fig:create-acc}
 \end{figure}
 
