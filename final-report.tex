@@ -137,7 +137,7 @@ The aim is to reduce the burden on system developers. The results after testing 
 
 \begin{flushleft}
 \begin{tabular*}{\textwidth}{@{}lp{0.8\textwidth}}
-\textbf{Keywords}: & Web Application / Optical Character Recognition (OCR) / Database Design
+\textbf{Keywords}: & Web Application / Database Design
 
 \end{tabular*}
 \end{flushleft}
@@ -166,7 +166,7 @@ Generative AI for Traditional Form Converter เป็นโครงการ�
 \begin{tabular*}{\textwidth}{@{}lp{0.8\textwidth}}
  & \\
 
-\textbf{คำสำคัญ}: & เว็บแอปพลิเคชัน / การรู้จดจำอักขระด้วยแสง /  ออกแบบระบบฐานข้อมูล
+\textbf{คำสำคัญ}: & เว็บแอปพลิเคชัน /  ออกแบบระบบฐานข้อมูล
 \end{tabular*}
 \end{flushleft}
 \endabstract
@@ -215,7 +215,7 @@ Finally, we would like to express our thanks to everyone, including our family, 
 AI & Artificial Intelligence\\
 ML & Machine Learning  \\
 NLP & Natural Language Processing  \\
-OCR & Optical Character Recognition  \\
+PDF & Portable Document Format \\
 UX/UI & User Interface and User Experience
 \end{tabular}
 \end{flushleft}
@@ -287,7 +287,7 @@ For the second semester, our project focus on implementing the form extractor an
 This project aims to develop a fully functional web application that able to converting a paper-based form or pdf form into a web-based form by utilizing a generative AI for generate a data type of form label. And the web application should reduce a time developer have spend when they converting a form.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%  Literature Review %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%  CHAPTER 2 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Background Theory and Related Research}
 
@@ -316,114 +316,114 @@ Machine Learning is an application of Artificial Intelligence (AI) that provides
     \item \textbf{Semi-supervised learning:} Like a mix of supervised and unsupervised learning. It uses a small amount of labeled data (with answers) and a large amount of unlabeled data (without answers) to train the model. The labeled data helps guide the model, while the unlabeled data helps it find patterns and improve accuracy.
 \end{itemize}
 
-\subsection{Computer Vision (CV)}
-Computer Vision (CV) is a field of AI that uses machine learning to enable computers to interpret and understand visual information from the world, such as images and videos. It combines different methods and technologies. \par
-Key functions of computer vision include analyzing images and videos to extract important information, understanding events and descriptions, and identifying patterns in scenery. CV employs methods that handle large volumes of data, making it applicable across various domains.
+% \subsection{Computer Vision (CV)}
+% Computer Vision (CV) is a field of AI that uses machine learning to enable computers to interpret and understand visual information from the world, such as images and videos. It combines different methods and technologies. \par
+% Key functions of computer vision include analyzing images and videos to extract important information, understanding events and descriptions, and identifying patterns in scenery. CV employs methods that handle large volumes of data, making it applicable across various domains.
 
-\subsection{Image Processing}
-Image processing is the one technique in \textbf{Computer Vision (CV)} that is used to enhance and prepare images for analysis by applying various computational algorithms. In the context of form conversion, image processing plays a critical role in improving the quality of scanned documents or digital images before they undergo text recognition.
+% \subsection{Image Processing}
+% Image processing is the one technique in \textbf{Computer Vision (CV)} that is used to enhance and prepare images for analysis by applying various computational algorithms. In the context of form conversion, image processing plays a critical role in improving the quality of scanned documents or digital images before they undergo text recognition.
 
-\subsubsection{Image Acquisition} The first step in image processing is acquiring the image, where an image is captured using a camera, scanner, or another device. Then the image is converted into a digital format that can be manipulated by algorithms.
+% \subsubsection{Image Acquisition} The first step in image processing is acquiring the image, where an image is captured using a camera, scanner, or another device. Then the image is converted into a digital format that can be manipulated by algorithms.
 
-\subsubsection{Preprocessing} Preprocessing is a fundamental step where the raw image quality is improved to ensure it is ready for more advanced analysis. This involves techniques such as:
+% \subsubsection{Preprocessing} Preprocessing is a fundamental step where the raw image quality is improved to ensure it is ready for more advanced analysis. This involves techniques such as:
 
-\begin{itemize}
-    \item \textbf{Image Enhancement:}  Image enhancement involves using techniques to improve the visual quality of an image so that important features are more visible. This is especially important when working with scanned documents or photos that may have different lighting conditions, colors, or other visual characteristics that could obscure the text. Here are some common techniques used for image enhancement:
-	\begin{enumerate}
-    		\item \textbf{Grayscale Conversion}
-    		\item \textbf{Histogram Equalization}
-   		 \item \textbf{Thresholding}
-   		 \item \textbf{Contrast Adjustment}
-	\end{enumerate}
+% \begin{itemize}
+%     \item \textbf{Image Enhancement:}  Image enhancement involves using techniques to improve the visual quality of an image so that important features are more visible. This is especially important when working with scanned documents or photos that may have different lighting conditions, colors, or other visual characteristics that could obscure the text. Here are some common techniques used for image enhancement:
+% 	\begin{enumerate}
+%     		\item \textbf{Grayscale Conversion}
+%     		\item \textbf{Histogram Equalization}
+%    		 \item \textbf{Thresholding}
+%    		 \item \textbf{Contrast Adjustment}
+% 	\end{enumerate}
  
-    \item \textbf{Image Restoration:} The Image Restoration process aims to improve the appearance of an image by fixing problems like noise and blurriness. It uses mathematical models to understand how the image got damaged and applies techniques to clean it up. Common techniques involved in image restoration include Noise Reduction and Blur removal 
-\end{itemize}
+%     \item \textbf{Image Restoration:} The Image Restoration process aims to improve the appearance of an image by fixing problems like noise and blurriness. It uses mathematical models to understand how the image got damaged and applies techniques to clean it up. Common techniques involved in image restoration include Noise Reduction and Blur removal 
+% \end{itemize}
 
-\subsubsection{Segmentation} The main goal of image segmentation is to divide an image into distinct parts that match real objects or areas in the picture. This process separates important pixels from the rest of the image, resulting in sections that cover the entire image or outlines of objects.
+% \subsubsection{Segmentation} The main goal of image segmentation is to divide an image into distinct parts that match real objects or areas in the picture. This process separates important pixels from the rest of the image, resulting in sections that cover the entire image or outlines of objects.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=10cm]{./assets/segmentation.jpg}
-    \caption{Image Segmentation Explained from 
-    \href{https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/1_image-segmentation\%202.jpeg}{Builtin.com}.}
-    \label{fig:figure-2.1}  
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=10cm]{./assets/segmentation.jpg}
+%     \caption{Image Segmentation Explained from 
+%     \href{https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/1_image-segmentation\%202.jpeg}{Builtin.com}.}
+%     \label{fig:figure-2.1}  
+% \end{figure}
 
-\begin{enumerate}
-    \item[(a)] Original image
-    \item[(b)] Semantic Segmentation
-    \item[(c)] Instance Segmentation
-\end{enumerate}
+% \begin{enumerate}
+%     \item[(a)] Original image
+%     \item[(b)] Semantic Segmentation
+%     \item[(c)] Instance Segmentation
+% \end{enumerate}
 
-\subsubsection{Feature Extraction} Once the image has been segmented, the next step is to extract  features that can be used for further analysis, such as character recognition or form field identification. Feature extraction techniques identify important attributes such as: 
+% \subsubsection{Feature Extraction} Once the image has been segmented, the next step is to extract  features that can be used for further analysis, such as character recognition or form field identification. Feature extraction techniques identify important attributes such as: 
 
-\begin{enumerate}
-	\item \textbf{Color Image Processing:} Color image processing is classified into two types:
-	\begin{enumerate}
-		\item \textbf{Full-color processing:}involves images captured using full-color sensors, further divided into:
-			\begin{enumerate}
-			    	\item Individual Component Processing: Each color component (like RGB) is processed separately before creating a composite image.
-			    	\item Direct Color Pixel Manipulation: Color pixels are manipulated directly.
-			\end{enumerate}
-	    	\item \textbf{Pseudo-color processing:} assigns colors to specific gray values based on criteria, utilizing techniques like intensity slicing and color coding.
-	\end{enumerate}
-	\item \textbf{Image Compression:} Image compression reduces the amount of information needed to represent a digital image, primarily to save storage space or reduce bandwidth during transmission. It is categorized into two types:
-	\begin{enumerate}
-	    	\item \textbf{Lossless Compression:} No information is lost during compression.
-	    	\item \textbf{Lossy Compression:} Accepts some loss of information for higher compression rates.
-	\end{enumerate}
-	\newpage %%%ขึ้นหน้าใหม่%%%
-	\item \textbf{Morphological Image Processing:} This technique focuses on extracting and analyzing the shape and structure of objects within an image. Common morphological operators include:
-	\begin{enumerate}
-		\item Boundary extraction
-		\item Region filling
-		\item Skeletonization
-		\item Extraction of connected components
-	\end{enumerate}
-	\item \textbf{Representation and Description:} Post-segmentation, raw pixel data needs to be compacted for further analysis. Representation techniques can focus on external features (like boundaries) or internal features (like pixels covering the region). Common methods include:
-	\begin{enumerate}
-		\item \textbf{Chain Codes and Polygonal Approximations:} representing shapes.
-		\item \textbf{Boundary Descriptors:} Include features like length, diameter, and curvature.
-		\item \textbf{Regional Descriptors:} Describe image regions in terms of area, compactness, gray level statistics, and topological features.
-	\end{enumerate}
-\end{enumerate}
+% \begin{enumerate}
+% 	\item \textbf{Color Image Processing:} Color image processing is classified into two types:
+% 	\begin{enumerate}
+% 		\item \textbf{Full-color processing:}involves images captured using full-color sensors, further divided into:
+% 			\begin{enumerate}
+% 			    	\item Individual Component Processing: Each color component (like RGB) is processed separately before creating a composite image.
+% 			    	\item Direct Color Pixel Manipulation: Color pixels are manipulated directly.
+% 			\end{enumerate}
+% 	    	\item \textbf{Pseudo-color processing:} assigns colors to specific gray values based on criteria, utilizing techniques like intensity slicing and color coding.
+% 	\end{enumerate}
+% 	\item \textbf{Image Compression:} Image compression reduces the amount of information needed to represent a digital image, primarily to save storage space or reduce bandwidth during transmission. It is categorized into two types:
+% 	\begin{enumerate}
+% 	    	\item \textbf{Lossless Compression:} No information is lost during compression.
+% 	    	\item \textbf{Lossy Compression:} Accepts some loss of information for higher compression rates.
+% 	\end{enumerate}
+% 	\newpage %%%ขึ้นหน้าใหม่%%%
+% 	\item \textbf{Morphological Image Processing:} This technique focuses on extracting and analyzing the shape and structure of objects within an image. Common morphological operators include:
+% 	\begin{enumerate}
+% 		\item Boundary extraction
+% 		\item Region filling
+% 		\item Skeletonization
+% 		\item Extraction of connected components
+% 	\end{enumerate}
+% 	\item \textbf{Representation and Description:} Post-segmentation, raw pixel data needs to be compacted for further analysis. Representation techniques can focus on external features (like boundaries) or internal features (like pixels covering the region). Common methods include:
+% 	\begin{enumerate}
+% 		\item \textbf{Chain Codes and Polygonal Approximations:} representing shapes.
+% 		\item \textbf{Boundary Descriptors:} Include features like length, diameter, and curvature.
+% 		\item \textbf{Regional Descriptors:} Describe image regions in terms of area, compactness, gray level statistics, and topological features.
+% 	\end{enumerate}
+% \end{enumerate}
 
-\subsubsection{Object Recognition} Object recognition is the process of identifying and classifying different regions in an image, referred to as patterns or objects. There are two main approaches to object recognition
+% \subsubsection{Object Recognition} Object recognition is the process of identifying and classifying different regions in an image, referred to as patterns or objects. There are two main approaches to object recognition
 
-\begin{enumerate}
-	\item \textbf{Decision-Theoretic Approach:} This method uses numerical descriptions to analyze patterns. It looks at measurable features.
-	\item \textbf{Structural Approach:} This approach focuses on qualitative descriptions, using relational descriptors that describe the relationships and arrangements between different parts of the patterns.
-\end{enumerate}
+% \begin{enumerate}
+% 	\item \textbf{Decision-Theoretic Approach:} This method uses numerical descriptions to analyze patterns. It looks at measurable features.
+% 	\item \textbf{Structural Approach:} This approach focuses on qualitative descriptions, using relational descriptors that describe the relationships and arrangements between different parts of the patterns.
+% \end{enumerate}
  
-\subsection{Optical Character Recognition (OCR)} OCR or Optical Character Recognition is an input device used to read a printed text. OCR scans text in image, analyzes it character by character and converts it into machine-readable code and stores text on the system memory and processes it as a document. OCR is widely used in applications where transforming printed material into editable text.
+% \subsection{Optical Character Recognition (OCR)} OCR or Optical Character Recognition is an input device used to read a printed text. OCR scans text in image, analyzes it character by character and converts it into machine-readable code and stores text on the system memory and processes it as a document. OCR is widely used in applications where transforming printed material into editable text.
 
-\subsubsection{OCR Architecture} After \textbf{image processing}, OCR comes into play. It extracts the text from the processed images, analyzing the document character by character to convert it into machine-readable code. It converts printed or handwritten text from forms into digital text, which can then be manipulated and stored. Once OCR extracts the raw text, \textbf{text processing} helps clean, format, and analyze this text.
+% \subsubsection{OCR Architecture} After \textbf{image processing}, OCR comes into play. It extracts the text from the processed images, analyzing the document character by character to convert it into machine-readable code. It converts printed or handwritten text from forms into digital text, which can then be manipulated and stored. Once OCR extracts the raw text, \textbf{text processing} helps clean, format, and analyze this text.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=10cm]{./assets/OCR-Process.png}
-\caption{OCR Process}
-\caption{OCR Process from 
-\href{https://www.researchgate.net/profile/Adrian-Gomez-9/publication/281099638/figure/fig4/AS:614266293997575@1523463905255/Architecture-diagram-for-the-OCR-alternative.png}{Researchgate.net}.}
-\label{fig:figure-2.2}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=10cm]{./assets/OCR-Process.png}
+% \caption{OCR Process}
+% \caption{OCR Process from 
+% \href{https://www.researchgate.net/profile/Adrian-Gomez-9/publication/281099638/figure/fig4/AS:614266293997575@1523463905255/Architecture-diagram-for-the-OCR-alternative.png}{Researchgate.net}.}
+% \label{fig:figure-2.2}
+% \end{figure}
 
-\subsubsection{Post OCR error correction} After Extract the text from the image, The OCR are required a post OCR error correction because the text that the OCR have extracted may not misspelling and character miss order and the post OCR have following approach.
+% \subsubsection{Post OCR error correction} After Extract the text from the image, The OCR are required a post OCR error correction because the text that the OCR have extracted may not misspelling and character miss order and the post OCR have following approach.
 
-\begin{enumerate}
-	\item \textbf{Symmetric Delete Spelling Correction:} Symmetric Delete Spelling Correction is works by generating possible corrections for misspelled words using a deletion-based algorithm. First, a precomputed dictionary is built by selecting valid words and generating variations with up to N deleted characters. These variations function as keys, leading back to the correct words. When a user types a misspelled word, the algorithm generates similar deletions and looks for matches in the precomputed dictionary. If a match is found, the appropriate word is suggested.
-\newpage %%%ขึ้นหน้าใหม่%%%	
-	\item \textbf{TF-IDF and Cosine Similarity:} TF-IDF is a technique that use to change a word into number or vector and the cosine similarity is a technique that use to measure how similar between two documents, and we will use a dictionary and convert it into vector, then compare with error word and find the closest distance.
+% \begin{enumerate}
+% 	\item \textbf{Symmetric Delete Spelling Correction:} Symmetric Delete Spelling Correction is works by generating possible corrections for misspelled words using a deletion-based algorithm. First, a precomputed dictionary is built by selecting valid words and generating variations with up to N deleted characters. These variations function as keys, leading back to the correct words. When a user types a misspelled word, the algorithm generates similar deletions and looks for matches in the precomputed dictionary. If a match is found, the appropriate word is suggested.
+% \newpage %%%ขึ้นหน้าใหม่%%%	
+% 	\item \textbf{TF-IDF and Cosine Similarity:} TF-IDF is a technique that use to change a word into number or vector and the cosine similarity is a technique that use to measure how similar between two documents, and we will use a dictionary and convert it into vector, then compare with error word and find the closest distance.
 	
-\[
-\text{TF-IDF}(t, d) = \text{TF}(t, d) \times \text{IDF}(t)
-\]
+% \[
+% \text{TF-IDF}(t, d) = \text{TF}(t, d) \times \text{IDF}(t)
+% \]
 	
-\[
-\text{Cosine Similarity} = \frac{\sum_{i=1}^{n} A_i B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \times \sqrt{\sum_{i=1}^{n} B_i^2}}
-\]
+% \[
+% \text{Cosine Similarity} = \frac{\sum_{i=1}^{n} A_i B_i}{\sqrt{\sum_{i=1}^{n} A_i^2} \times \sqrt{\sum_{i=1}^{n} B_i^2}}
+% \]
 
-\end{enumerate}
+% \end{enumerate}
 
 \subsection{Natural Language Processing (NLP)} Natural Language Processing (NLP) enables machines to understand, interpret, and generate human language in a valuable way. The process involves several key techniques: Tokenization: Breaking down text into smaller units (tokens), such as words or phrases, which can be analyzed separately. Stop Word Removal: Eliminates common words that provide little informational value, focusing on more meaningful words. Lemmatization and Stemming: Reduces words to their root forms to unify different inflected versions (e.g., "walking" becomes "walk"). Part-of-Speech Tagging: Assigns tags to words based on their grammatical roles (nouns, verbs, adjectives, etc.).
 
@@ -491,30 +491,38 @@ Common threats include:
 
 \subsubsection{TailwindCSS} Tailwind CSS is a utility-focused CSS framework that simplifies web development by providing pre-designed utility classes. These utility classes allow you to create custom designs.
 
-\subsubsection{SurveyJS} SurveyJS is a set of JavaScript components that allow users to build surveys, quizzes, polls, and other web forms, store them in your database, and visualize survey results in custom dashboards.
+\subsubsection{Formkit} Formkit is a comprehensive form building framework for Vue developers that makes authoring high-quality production-ready forms faster and more accessible.
 
 \subsection{Backend Technology}
 \subsubsection{FastAPI} FastAPI is a modern web framework for creating Python APIs that prioritizes speed, ease of development, and automated validation. It has gained popularity for developing quick, high-performance APIs because it uses Python type hints to provide explicit, automatic data validation and interactive API documentation.
 
 \subsubsection{Pydantic} Pydantic is a Python data validation and parsing library that enforces data types and restrictions using Python type annotations. Although it can be used separately, it is an essential part of FastAPI. With Pydantic models, you can easily serialize data, validate incoming data, and specify the structure of your data.
 
-\subsubsection{SQLAlchemy} SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL without creating a SQL statement.
+\subsubsection{SQLModel} SQLModel is a library for interacting with SQL databases from Python code, with Python objects.
 
 \subsubsection{PostgresSQL} The PostgreSQL popular open-source relational database management system (RDBMS) for managing and storing data. It is renowned for being reliable, effective, and compliant with SQL standards. And It support storing a json format data type which it can be act as NoSQL in some situation.
 
 \subsection{Document Processing}
 \subsubsection{Python} Python Programming language is a popular high-level computer programming language for machine learning because it is simple to use and easy to read and write. Additionally, it has a fast processing speed. Web development, data analysis, automation, scientific computing, and many more topics are among the many libraries available.
 \newpage %%%ขึ้นหน้าใหม่%%%
-\subsubsection{Open Source Computer Vision Library (OpenCV)} Open Source Computer Vision Library is an open-source library designed for real-time computer vision and image processing. It provides tools for tasks such as object detection, image segmentation, facial recognition, and edge detection. OpenCV is widely used in fields like robotics, augmented reality, and machine learning.\par
-OpenCV processes image data using built-in functions for manipulating pixel values. It works with image and video formats and can be integrated with machine learning models to perform visual recognition tasks. It supports various languages, including Python
+% \subsubsection{Open Source Computer Vision Library (OpenCV)} Open Source Computer Vision Library is an open-source library designed for real-time computer vision and image processing. It provides tools for tasks such as object detection, image segmentation, facial recognition, and edge detection. OpenCV is widely used in fields like robotics, augmented reality, and machine learning.\par
+% OpenCV processes image data using built-in functions for manipulating pixel values. It works with image and video formats and can be integrated with machine learning models to perform visual recognition tasks. It supports various languages, including Python
 
-\subsubsection{Tesseract OCR} Tesseract OCR is an open-source Optical Character Recognition (OCR) engine used to convert images of text into machine-encoded text. Developed by Hewlett-Packard and maintained by Google, it supports various languages and one of them is python, making it highly versatile for tasks like digitizing printed materials, extracting text from images, and enhancing accessibility in digital applications. It is commonly integrated with other image processing libraries like OpenCV to handle pre-processing tasks, improving text recognition accuracy, especially in noisy or distorted images.
+% \subsubsection{Tesseract OCR} Tesseract OCR is an open-source Optical Character Recognition (OCR) engine used to convert images of text into machine-encoded text. Developed by Hewlett-Packard and maintained by Google, it supports various languages and one of them is python, making it highly versatile for tasks like digitizing printed materials, extracting text from images, and enhancing accessibility in digital applications. It is commonly integrated with other image processing libraries like OpenCV to handle pre-processing tasks, improving text recognition accuracy, especially in noisy or distorted images.
 
 \subsubsection{NLLB-200} NLLB-200 (No Language Left Behind) is a project by Meta (Facebook) that focuses on creating AI models capable of translating between 200 languages.
 
 \subsubsection{PyTorch} PyTorch is an open-source deep learning framework developed by Facebook's AI Research lab (FAIR). It provides tools for building and training neural networks using dynamic computational graphs, which allow for flexibility and ease in model building.
 
 \subsubsection{LLAMA} LLama (short for Large Language Model Architecture) is a type of AI model designed to understand and generate human-like text. It is built using a transformer architecture, which helps it learn language patterns and produce meaningful responses based on its training data.
+
+\subsubsection{PDF} PDF is an abbreviation that stands for Portable Document Format. It's a versatile file format created by Adobe that gives people an easy, reliable way to present and exchange documents - regardless of the software, hardware, or operating systems being used by anyone who views the document.
+
+\subsubsection{PDF Parsing} PDF Parsing refers to the process of programmatically reading, extracting, and processing data from PDF (Portable Document Format) files. This is often used to automate data extraction from other structured or semi-structured documents.
+
+\subsubsection{Translation} Translation is the process of converting text or speech from one language into another while preserving its meaning.
+
+\subsubsection{Text Parsing} Text parsing refers to the process of analyzing text to extract useful information or convert it into a structured format. This is a fundamental task in Natural Language Processing (NLP) and text mining.
 
 \section{Competing solutions}
 \subsection{Microsoft Azure Document Intelligence}
