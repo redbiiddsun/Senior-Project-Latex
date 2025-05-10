@@ -126,15 +126,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \abstract
 
-\setlength{\parindent}{15pt} Generative AI for Traditional Form Converter is a project developed through a web application called PaperlessTransform Application
-to solve the problem of taking a long time to convert paper forms into web applications. The development of this web application uses artificial intelligence to analyze the types of data of questions.\par
-As the demand for form conversion increases, system developers need to analyze forms and design database systems, design web application pages, and develop new systems.
-This results in increased work time. In addition, system developers face increased workloads, causing personnel to spend inefficient time on their work.
-Our project focuses on developing a web application that can convert documents in the form of paper forms or electronic files into web application formats.
-It uses optical character recognition techniques to convert text images into text formats to process the text from the converted text images to detect questions in the form format.\par
-The project team focuses on developing a web application that has the ability to detect questions and store web form data.
-The aim is to reduce the burden on system developers. The results after testing the web application in the work show that the web application can detect questions in the form and store data at a satisfactory level. Therefore, it can be concluded that the project can significantly solve the problem of increased work time for system developers.
-
+\setlength{\parindent}{15pt} The Generative AI for Traditional Form Converter is a project developed through a web application called PaperlessTransform Application, aimed at solving the problem of time-consuming processes involved in converting PDF forms into web applications. This web application leverages artificial intelligence to analyze data types of input labels. As the demand for form conversion continues to increase, system developers are required to analyze a PDF forms structure, design corresponding database structures, create web application interfaces, and develop new systems. These tasks result in significantly increased work time and workload, causing personnel to spend time inefficiently. The goal of this project is to reduce the burden on system developers by automating parts of this workflow. The application is designed to process a PDF file, detect an input fields using parser,  generate an input field data type using AI-powered text analysis, and generate web-based forms accordingly. In addition to form field detection, the system can store form data in a structured format suitable for web deployment, enabling a smoother transition from traditional documents to digital interfaces. The project team has focused on developing a robust system that not only identifies relevant form elements accurately but also simplifies the data handling and form creation process. After testing the web application, results show that it can detect input field within forms and store data at a basic level, demonstrating its practical effectiveness in real-world scenarios. Therefore, it can be concluded that this project addresses the problem of increased work time and inefficiency for system developers, offering an effective tool for automated form conversion and reducing the manual effort required in digitizing traditional forms.
 \begin{flushleft}
 \begin{tabular*}{\textwidth}{@{}lp{0.8\textwidth}}
 \textbf{Keywords}: & Web Application / Optical Character Recognition (OCR) / Database Design
@@ -245,7 +237,7 @@ requirements of this project.
 
 \section{Scope of Work}
 
-The scope of this project involves the development of a web application that enables users to upload a PDF or image file. The web application will process text extraction using optical character recognition (OCR). The primary function of the web application includes creating a form, editing a form, deleting a form, and filling a form. The final deliverable of this project will be a responsive web interface web application that allows users to manage the form and view the data, including ensuring data privacy and security measures to protect sensitive information by implementing authentication for the creator and a normal user. The project involves research of optical character recognition (OCR) for the text extraction from the image and the development of generative AI for data type generation, also a Thai language translation to English.
+The scope of this project involves the development of a web application that enables users to upload a PDF file. The web application will process text extraction using technique called pdf parsing. The primary function of the web application includes creating a form, editing a form, deleting a form, and filling a form. The final deliverable of this project will be a web application that allows users to manage the form and view the data, including ensuring data privacy and security measures to protect sensitive information by implementing authentication for the creator and a normal user. The project involves research of text parser for extract a input label from a pdf text and the development of generative AI for data type generation, also a Thai language translation to English.
 %\begin{itemize}
 %\item   What are the problems you are addressing? 
 %\item  Why they are important?
@@ -256,11 +248,11 @@ The scope of this project involves the development of a web application that ena
 The limitation of the project will addresses a possible constraints and challenges that might affect its scope, execution, or outcomes. the limiting factor are include time, cost and risk etc.
 
 \begin{itemize}
- \item \textbf{OCR Accuracy:} The accuracy of OCR text extraction may vary depending on the quality of the uploaded document, such as low-resolution images, poor lighting, and the project does not support handwritten text.
- 
+ \item \textbf{PDF Support:} The project supports text-based PDFs but not image-based ones. Text within scanned documents cannot be extracted due to the lack of OCR support. Additionally, some PDFs may fail during text extraction because they are compressed or contain missing characters.
+  
     \item \textbf{Language Support:} While the system has the ability to translate text, the accuracy and availability of supported languages may be limited, with the project currently supporting Thai and English form only.
     
-    \item \textbf{Required User Reviewing:} After the text extraction and layout detection, the system required a user to review and correct a input label that the system have process. The limitation required of user reviewing because of the lack of OCR accuracy and the system error.
+    \item \textbf{Required User Reviewing:} After text extraction and layout detection, the system requires users to review and correct the input labels it processed. This limitation exists due to text extraction accuracy and generative AI accuracy.
       
     \item \textbf{Data Privacy and Security:} Despite the implementation of verification and security measures, there may still be vulnerabilities related to handling sensitive data, which are continuously checked and updated.
 \end{itemize}
@@ -553,9 +545,9 @@ functionality and architecture.
 
 \subsection{Feature List}
 
-\subsubsection{Paper-Based Form Analysis System}
+\subsubsection{Form Layout Analysis System}
 
-The Paper-Based Form Analysis System will extract all the text from the document that is uploaded by the user via a web application. The system will then analyze the form’s pattern ,extract the input labels, translate the text into English, and send the translated information to a generative AI for data type generation.
+The Form Layout Analysis System will extract all the text from the document that is uploaded by the user via a web application. The system will then analyze the form’s pattern, extract the input labels, translate the text into English, and send the translated information to a generative AI for data type generation.
 
 \subsubsection{Form Schema generator System}
 
@@ -567,12 +559,12 @@ The Web Form System must enable users to complete the form, store the data in th
 
 \subsubsection{Registration and Authentication System}
 
-The Registration and Authentication System must enable a user to register and login to the system by using only email and password. This including a forgot password and the  OTP for reset password.	
+The Registration and Authentication System must enable a user to register and login to the system by using only email and password. This including a forgot password and the  OTP for reset password.
 
 
 \section{Use Case Diagram}
 
-From the figure \ref{fig:use-case} The diagram shows a relationship between the user and the system by using a use case diagram. The user of the system is a developer that needs to transform a paper-base form into web application form and the user who going to fill the form. The system consists of 3 different systems, which are paper-based form analysis systems, form schema generator systems, web form systems and registration and authentication systems. The user can upload a paper-based form to the system, and the system will transform the form into a web-based form.
+From the figure \ref{fig:use-case} The diagram shows a relationship between the user and the system by using a use case diagram. The user of the system is a developer that needs to transform a paper-base form into web application form and the user who going to fill the form. The system consists of 3 different systems, which are form layout analysis system, form schema generator systems, web form systems and registration and authentication systems. The user can upload a paper-based form to the system, and the system will transform the form into a web-based form.
 
 \begin{figure}[!h]
 \centering
@@ -665,7 +657,7 @@ Main Success Scenario:
 \begin{enumerate}
     \item User go to home page.
     \item User click at view a data of the form.
-    \item User can see a form data
+    \item User can view a form result.
 \end{enumerate}
 
 \subsection{Fill up the form}
@@ -711,7 +703,7 @@ Traditional Form Converter System is working.
 \item  \textbf{Upload a form file:} After logging in, Form creator must upload a form file to add new form to the system.
 \item  \textbf{Recheck all detail and make correction:} In this step, Form creator must check all the information that system has generated and make a correction if incase of error text found.
 \item  \textbf{Select a from visibility:} Select a form visibility, whether the form creator need to form to be access by the user who signed-in or anyone can access.
-\item  \textbf{Deploy a form and Generate a link:} In this step, the form will be saved and generated a link to allow user to access.
+\item  \textbf{Deploy a form and Generate a access link:} In this step, the form will be saved and generated a access link to allow user to access.
 
 \end{itemize}
 
@@ -748,10 +740,10 @@ Figure \ref{fig:system-arch}, The diagram shown a system architecture in figure 
 \item \textbf{FastAPI} is a Back-end framework for building REST API
 \item \textbf{PostgreSQL}  is a relational database
 \item \textbf{Pydantic}  is a python library used for data validation 
-\item \textbf{SQLAlchemy} is a Python base Object Relational Mapper (ORM) and SQL Tool kit
-\item \textbf{SurveyJS} is a form engine Llibrary
+\item \textbf{SQLModel} is a Python base Object Relational Mapper (ORM) and SQL Tool kit
+\item \textbf{Formkit} is a form engine library for vue.js
 \item \textbf{Meta NLLB-200} is a Model for text translation
-\item \textbf{Tesseract OCR} is a OCR for extract text from image
+\item \textbf{PyMuPDF}  is a high-performance Python library for data extraction, analysis, conversion and manipulation of PDF documents.
 \item \textbf{Llama 3.2} is a generative AI from Facebook
 \end{itemize}
 
@@ -762,15 +754,15 @@ Figure \ref{fig:system-arch}, The diagram shown a system architecture in figure 
 
 \subsubsection{Extracting text}
 
-Extracting text is the first process after the user has uploaded a file via the web application, this step is going to extracting text from the file by using an OCR technique for images, but If the user has provided a PDF file, the system will use a PDF library, such as PyMuPDF or Pdfplumber to extract a text and the layout. The OCR technique requires additional steps because we must pre-process the image using a black-and-white scale, and enhance its quality and clarity before the OCR process can begin. A text will be returned by the system once the process is complete.
+Text extraction is the first step after a user uploads a file through the web application. In this stage, a PDF library such as PyMuPDF or pdfplumber is used to extract both the text and layout from the PDF. This is followed by text preprocessing to prepare the content for analysis such as normalizing special dot characters to standard dots to ensure accurate parsing during the next phase.
 
 \subsubsection{Text Parse}
 
 Text parsing is the second process after the extracted text has been completed. Text parse is the process of analyzing a text and breaking down the text to convert it into a structured format, In this process, the purpose of text parse is to analyze the layout of the form, by using a text from a previous process to identify where which text is the label of the input field. The text parse algorithm starts by separating the text from each line and analyzing it line by line, If there is a word in front of the small point the text parse will mark the text as an input label, but if the line starts with the small point the parse will look back to the previous line to check whether if there any text that matches with the condition that parse has.
 
-\subsubsection{Text Error Correction}
+%\subsubsection{Text Error Correction}
 
-Text Error Correction is the third process after extracting text and text parse, respectively. Text error correction is identifying and fixing errors in a given text. Text error correction includes spelling mistakes, grammatical errors, punctuation issues, and incorrect word usage. In this process, the text error correction focuses on spelling mistakes and vowel missed order, To make a correction, the first step is to tokenize the whole word into a single word and check the word with a dictionary, If the word does not exist then the system will mark it as an error like this "<ERROR>Wolrd</ERROR>". The system will correct the word with a cosine similarity technique, the technique will convert a dictionary into a vector and also an error text. It will rank with cosine similarity, then it will take the first rank to replace a text. This process is required only for the user who uploads an image.
+%Text Error Correction is the third process after extracting text and text parse, respectively. Text error correction is identifying and fixing errors in a given text. Text error correction includes spelling mistakes, grammatical errors, punctuation issues, and incorrect word usage. In this process, the text error correction focuses on spelling mistakes and vowel missed order, To make a correction, the first step is to tokenize the whole word into a single word and check the word with a dictionary, If the word does not exist then the system will mark it as an error like this "<ERROR>Wolrd</ERROR>". The system will correct the word with a cosine similarity technique, the technique will convert a dictionary into a vector and also an error text. It will rank with cosine similarity, then it will take the first rank to replace a text. This process is required only for the user who uploads an image.
 
 \subsection{AI Model}
 
@@ -796,11 +788,11 @@ The Form Schema Generator is the last process of the flow, the form schema gener
 
 \section{Database Design}
 
-Figure \ref{fig:er-diagram} shown a project database design, the system consist three tables in our project database design are user, form, and form result. table is used to store user data, form result is used to store a result that the user has filled out, and form table is used to store a form schema.
+Figure \ref{fig:er-diagram} shown a project database design, the system consist three tables in our project database design are user, form, and form result. table is used to store user data, form result is used to store a result that the user has filled out, and form table is used to store a form schema also a OTP and reset password session table.
 
 \begin{figure}[!h]
 \centering
-\fbox{\includegraphics[width=10cm]{./assets/ER-diagram.png}}
+\fbox{\includegraphics[width=10cm]{./assets/ER-diagram-new.png}}
 \caption{ER Diagram}\label{fig:er-diagram}
 \end{figure}
 
@@ -828,6 +820,17 @@ Figure \ref{fig:login} represents the login screen of the web application. This 
 
 Figure \ref{fig:create-acc} represents the create account page of the web application. This page allow user to create their own account by the user must provide a following field which is name, email and password.
 
+\subsection{Edit Profile}
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[width= 10cm]{./assets/UI/edit-profile.png}}
+\caption{Edit Profile Page}\label{fig:edit-profile}
+\end{figure}
+
+Figure \ref{fig:edit-profile} represents the edit profile page of the web application. This page allow user to update their user profile
+by user can edit firstname, lastname and email.
+
 \subsection{Forgot Password}
 
 At Figure \ref{fig:Forgot-Password} represents the create account page of the web application. When the user forgot their password, The user must navigate to this page by click at forget password from login page. And fill the email address to allow the system sent the One-time password (OTP) to email address. 
@@ -852,8 +855,6 @@ At Figure \ref{fig:Forgot-Password} represents the create account page of the we
 \fbox{\includegraphics[width= 10cm]{./assets/UI/Reset-password.png}}
 \caption{Reset Password Page}\label{fig:Reset Password}
 \end{figure}
-
-
 
 At the Figure \ref{fig:Forgot-Password-code}, It represents a OTP confirmation page which required a OTP Code that the system have send to the email address. Figure \ref{fig:Reset Password}, It represents a reset password pageIf it success the system will navigate to reset password page for enter a new password.
 
