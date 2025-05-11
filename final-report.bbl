@@ -28,66 +28,11 @@ TechTarget,
 \newblock Available at \url{https://www.techtarget.com/searchenterpriseai/definition/natural-language-processing-NLP},
 \newblock [Online; accessed 10-October-2024].
 
-\bibitem{pujari18}
-S. Pujari and M. Srinivas,
-\newblock 2018, ``Computer vision and image processing: A paper review,''
-\newblock ResearchGate,
-\newblock Available at \url{https://www.researchgate.net/publication/323106814_Computer_Vision_and_Image_Processing_A_Paper_Review},
-\newblock [Online; accessed 10-October-2024].
-
-\bibitem{singh16}
-R. Singh and P. Goyal,
-\newblock 2016, ``A review on image processing,''
-\newblock ResearchGate,
-\newblock Available at \url{https://www.researchgate.net/publication/271770488_A_Review_on_Image_Processing},
-\newblock [Online; accessed 10-October-2024].
-
-\bibitem{pujari20}
-S. Pujari and D. Ramesh,
-\newblock 2020, ``Image processing: What, how, and future,''
-\newblock ResearchGate,
-\newblock Available at \url{https://www.researchgate.net/publication/343771072_Image_Processing_What_How_and_Future},
-\newblock [Online; accessed 10-October-2024].
-
-\bibitem{gokcen20}
-A. Gokcen,
-\newblock 2020, ``What is image enhancement?''
-\newblock Medium,
-\newblock Available at \url{https://medium.com/@gokcenazakyol/what-is-image-enhancement-image-processing-3-32a813087e0a},
-\newblock [Online; accessed 10-October-2024].
-
 \bibitem{kumar12}
 S. Kumar,
 \newblock 2012, ``Automatic text processing machine learning techniques,''
 \newblock ResearchGate,
 \newblock Available at \url{https://www.researchgate.net/publication/236667720_AUTOMATIC_TEXT_PROCESSING_MACHINE_LEARNING_TECHNIQUES},
-\newblock [Online; accessed 10-October-2024].
-
-\bibitem{miller22}
-J. Miller,
-\newblock 2022, ``Optical character recognition (OCR),''
-\newblock ResearchGate,
-\newblock Available at \url{https://www.researchgate.net/publication/360620085_OPTICAL_CHARACTER_RECOGNITION},
-\newblock [Online; accessed 10-October-2024].
-
-\bibitem{smithgoogle14}
-J. Smith and Google AI,
-\newblock 2014, ``Tesseract OCR,''
-\newblock Google,
-\newblock Available at \url{https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/33418.pdf},
-\newblock [Online; accessed 10-October-2024].
-
-\bibitem{chen20}
-Q. Chen,
-\newblock 2020, ``T5: A detailed explanation,''
-\newblock Medium,
-\newblock Available at \url{https://medium.com/analytics-vidhya/t5-a-detailed-explanation-a0ac9bc53e51},
-\newblock [Online; accessed 10-October-2024].
-
-\bibitem{sqlalchemy}
-SQLAlchemy,
-\newblock n.d., ``SQLAlchemy,''
-\newblock Available at \url{https://www.sqlalchemy.org/},
 \newblock [Online; accessed 10-October-2024].
 
 \bibitem{fastapi}
@@ -108,11 +53,6 @@ GeeksforGeeks,
 \newblock Available at \url{https://www.geeksforgeeks.org/introduction-to-tailwind-css/},
 \newblock [Online; accessed 10-October-2024].
 
-\bibitem{surveyjs}
-SurveyJS,
-\newblock n.d., ``Introduction to SurveyJS Docs,''
-\newblock Available at \url{https://surveyjs.io/},
-\newblock [Online; accessed 10-October-2024].
 
 \bibitem{pujari16}
 S. Pujari,
@@ -121,12 +61,6 @@ S. Pujari,
 \newblock Available at \url{https://www.researchgate.net/publication/301590571_OpenCV_for_Computer_Vision_Applications},
 \newblock [Online; accessed 10-October-2024].
 
-\bibitem{raffel20}
-C. Raffel et al.,
-\newblock 2020, ``Text-to-Text Transfer Transformer (T5),''
-\newblock arXiv,
-\newblock Available at \url{https://arxiv.org/abs/1910.10683v4},
-\newblock [Online; accessed 10-October-2024].
 
 \bibitem{paszke19}
 A. Paszke et al.,
@@ -146,5 +80,79 @@ Microsoft,
 \newblock n.d., ``Extract data from forms with Document Intelligence,''
 \newblock Available at \url{https://learn.microsoft.com/th-th/training/paths/extract-data-from-forms-document-intelligence/},
 \newblock [Online; accessed 9-December-2024].
+
+\bibitem{ebookmaker}
+EbookMaker,
+\newblock n.d., ``What is a PDF? A complete guide,''
+\newblock EbookMaker,
+\newblock Available at \url{https://ebookmaker.ai/en-US/blog/what-is-a-pdf-a-complete-guide},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{adobepdfref}
+Adobe,
+\newblock n.d., ``PDF Reference, version 1.0,''
+\newblock Adobe,
+\newblock Available at \url{https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.0.pdf},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{adobetypes}
+Adobe,
+\newblock n.d., ``PDF types: Understanding different kinds of PDF files,''
+\newblock Adobe,
+\newblock Available at \url{https://www.adobe.com/uk/acrobat/resources/document-files/pdf-types.html},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{hrflow}
+HrFlow.ai,
+\newblock n.d., ``Text parsing documentation,''
+\newblock HrFlow.ai,
+\newblock Available at \url{https://developers.hrflow.ai/docs/text-parsing},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{alteryx}
+Alteryx Community,
+\newblock n.d., ``Text parsing guide,''
+\newblock Alteryx,
+\newblock Available at \url{https://community.alteryx.com/t5/Alteryx-Community-Resources/Text-Parsing-Guide/ta-p/1040190},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{fairseqnllb}
+Facebook AI Research,
+\newblock n.d., ``NLLB project in Fairseq GitHub repository,''
+\newblock GitHub,
+\newblock Available at \url{https://github.com/facebookresearch/fairseq/tree/nllb},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{nllbtutorial}
+F. Sharaf,
+\newblock n.d., ``Text translation using NLLB and HuggingFace – tutorial,''
+\newblock Medium,
+\newblock Available at \url{https://medium.com/@FaridSharaf/text-translation-using-nllb-and-huggingface-tutorial-7e789e0f7816},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{nllbresearch}
+Facebook AI Research,
+\newblock n.d., ``No Language Left Behind,''
+\newblock Facebook Research,
+\newblock Available at \url{https://research.facebook.com/publications/no-language-left-behind/},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{pymupdf}
+PyMuPDF,
+\newblock n.d., ``PyMuPDF documentation (fitz),''
+\newblock Available at \url{https://pymupdf.readthedocs.io/en/latest/},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{sqlmodel}
+Tiangolo,
+\newblock n.d., ``SQLModel documentation,''
+\newblock Available at \url{https://sqlmodel.tiangolo.com/},
+\newblock [Online; accessed 10-October-2024].
+
+\bibitem{formkit}
+FormKit,
+\newblock n.d., ``FormKit – The Vue form framework,''
+\newblock Available at \url{https://formkit.com/},
+\newblock [Online; accessed 10-October-2024].
 
 \end{thebibliography}
