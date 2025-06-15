@@ -874,6 +874,7 @@ Figure \ref{fig:form-page} showcases the example of web form user interface, whi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Implementation Result}
 
+\section {Introduction}
 This chapter will cover the entire working process and implementation progress of our project. Address complex issues as well. And we will divide each topic based on its features, which will include project data preparation.
 
 \section{Data Preparation}
@@ -1090,26 +1091,19 @@ The backend of the application is responsible for data manipulation, form manage
 
 %\emph{\textthai{หัวข้อต่าง ๆ ในแต่ละบทเป็นเพียงตัวอย่างเท่านั้น หัวข้อที่จะใส่ในแต่ละบทขึ้นอยู่กับโปรเจคของนักศึกษาและอาจารย์ที่ปรึกษา}}
 
-\section{Problems and Solutions}
+\section {Introdution}
 
-\subsection{Lack of Optical Character Recognition}
-
-From the outset, our objective was to create a system that could convert an image form into a web form. However, we encountered an issue with OCR accuracy, as the text that emerged from the OCR did not correspond to the text in the image. Nevertheless, the text parser is unable to extract a text label as a result of the OCR accuracy from the initial step. The text parser's main detection method is a dot, underscore, and dash, which are absent from the OCR-extracted text.To address this issue, we have decided to focus only a PDF file for transform into a web form and kept OCR for the future plan.
-
-\subsection{Lack of PDF Extraction}
-
-We have attempted to extract text from multiple forms and have observed that certain files contain vowels in the Thai language that have been replaced with numbers or special characters. The PDF itself displays the vowels correctly; however, when we extract the text using the library or manually copy the file, the result is an incorrect word containing a special character. In this instance, we conducted research and discovered that the vowel change was caused by a specific font, a special Unicode, or a compressed PDF file. To resolve this issue, we will verify the position of any unusual special text or number when the text is extracted. If it is identified, we will perform an error correction. However, this will be addressed in a future plan.
-
-\subsection{Lack of Tabular form support}
-
-One of the forms in the dataset we have gathered is tabular form style, which we are unable to support because the text parser we currently use only supports forms with lines and use a layout detection. We plan to support this in the future.
-
-\subsection{Language model for generating answers}
-
-Initially, we resolved to employ the open-source Llama 3.2:1B to perform the generating task in the design and methodology section. At first, we attempted to employ the open-source Llama 3.2; however, the output that was generated did not align with the instructions we provided. Resolution We have implemented a novel version of the generative AI, Llama 3:8B, which includes an eight billion parameter for training. The outcome has been satisfactory, as anticipated by the instructions we have provided.
+In this chapter, we will summarize the progress made on the project, detailing the work completed. We will
+discuss challenges encountered throughout the project, describing the issues faced and solutions adopted to
+address them. Finally, we will explore potential future work, identifying areas that could be improved to
+increase the overall effectiveness of the project.
 
 \section {Workloads}
+This project was carried out over the course of one academic year, divided into two semesters. In the first semester, after selecting the project topic, our team began by studying the fundamentals of document digitization, form recognition, and PDF layout analysis. As none of the team members had prior experience in these areas, we focused on building a solid understanding of the core concepts and tools needed for converting PDF documents into structured web forms. We also explored Optical Character Recognition (OCR) technologies to evaluate their potential for future integration.
 
+Following this, we researched existing frameworks and libraries that support PDF parsing, form field detection, and table structure recognition. The team prioritized approaches that could handle diverse and complex PDF layouts to ensure flexibility in real-world applications.
+
+During the second semester, we implemented the core system focusing on reliable PDF-to-web form conversion. Key features included enhanced form layout detection, initial support for tabular structure mapping, and the ability to upload and process multiple files simultaneously. The system was designed with a modular structure, allowing future extensions such as improved OCR integration for image-based documents and advanced table/form detection using machine learning. Additionally, we developed a web-based interface that enables users to upload documents, preview generated web forms, and manage conversion outputs efficiently.
 \begin{table}[H]
   \centering
   \caption{Workload and Progress Summary}
@@ -1148,18 +1142,45 @@ Initially, we resolved to employ the open-source Llama 3.2:1B to perform the gen
   \end{tabular}
 \end{table}
 
+\section{Problems and Solutions}
+
+\subsection{Lack of Optical Character Recognition}
+
+From the outset, our objective was to create a system that could convert an image form into a web form. However, we encountered an issue with OCR accuracy, as the text that emerged from the OCR did not correspond to the text in the image. Nevertheless, the text parser is unable to extract a text label as a result of the OCR accuracy from the initial step. The text parser's main detection method is a dot, underscore, and dash, which are absent from the OCR-extracted text.To address this issue, we have decided to focus only a PDF file for transform into a web form and kept OCR for the future plan.
+
+\subsection{Lack of PDF Extraction}
+
+We have attempted to extract text from multiple forms and have observed that certain files contain vowels in the Thai language that have been replaced with numbers or special characters. The PDF itself displays the vowels correctly; however, when we extract the text using the library or manually copy the file, the result is an incorrect word containing a special character. In this instance, we conducted research and discovered that the vowel change was caused by a specific font, a special Unicode, or a compressed PDF file. To resolve this issue, we will verify the position of any unusual special text or number when the text is extracted. If it is identified, we will perform an error correction. However, this will be addressed in a future plan.
+
+\subsection{Lack of Tabular form support}
+
+One of the forms in the dataset we have gathered is tabular form style, which we are unable to support because the text parser we currently use only supports forms with lines and use a layout detection. We plan to support this in the future.
+
+\subsection{Language model for generating answers}
+
+Initially, we resolved to employ the open-source Llama 3.2:1B to perform the generating task in the design and methodology section. At first, we attempted to employ the open-source Llama 3.2; however, the output that was generated did not align with the instructions we provided. Resolution We have implemented a novel version of the generative AI, Llama 3:8B, which includes an eight billion parameter for training. The outcome has been satisfactory, as anticipated by the instructions we have provided.
 
 \section{Future Works}
 
-\begin{itemize}
-  \item The use of OCR has been postponed due to the current limitations in OCR accuracy, which result in the extracted text failing to consistently correspond with the image content.  Instead, our current phase will be dedicated to the conversion of PDF files into web forms.  Future development plans will take into account the improvement of OCR performance and the integration of image-to-web form conversion.
-  
+This project aims to develop a system for converting PDF documents into web forms to simplify data entry and form generation processes. The system focuses on transforming various PDF layouts—including those with complex tables—into structured web forms that can be easily filled and processed online. While the initial plan included optical character recognition (OCR) for extracting text from scanned documents, OCR integration has been postponed due to current accuracy limitations. Instead, the current phase prioritizes enhancing layout detection capabilities, supporting multi-file uploads, and preparing for future improvements in OCR and image-to-web form conversion. This approach lays the foundation for a more flexible and scalable document digitization workflow.
+
+\begin{itemize}  
   \item Implement a form detection to detect more layout and support a tabular.
   
   \item Implement multi-file upload support, allowing users to upload several documents at once.
 \end{itemize}
 
+Although the OCR-based text extraction component, which was originally planned to support image-to-web form conversion, was not fully implemented due to current limitations in OCR accuracy, the system still delivers user-friendly functionality by focusing on reliable PDF-to-web form transformation. This missing feature has been noted for future development, once OCR performance improves.
 
+Importantly, the system was designed with practical deployment in mind. It follows a modular architecture that allows integration into larger platforms, such as enterprise form management or document processing systems. The use of standard libraries, clear input/output interfaces, and support for multi-file uploads makes it well suited for real business scenarios, including bulk form digitization, administrative workflows, and data entry automation.
+
+To further improve the performance, flexibility, and applicability of the system, the following areas are proposed for future development:
+
+\textbf{Form Detection and Tabular Support:}
+Enhance the form detection component to recognize a wider variety of document layouts, including those containing complex structures such as tables and multi-column sections. This involves refining the layout analysis algorithms and integrating table structure recognition to ensure accurate mapping of PDF elements into corresponding web form fields. Techniques such as rule-based parsing combined with machine learning (e.g., layout classification or object detection models) can be applied to improve detection accuracy and robustness across diverse document types. This enhancement will enable the system to handle forms with more intricate designs, supporting a broader range of business and administrative use cases.
+
+\textbf{Multi-file Upload Support:}
+Implement functionality that allows users to upload multiple documents simultaneously, streamlining the workflow for processing large batches of files. This feature will support bulk conversion of PDF documents into web forms in a single operation, improving efficiency and user convenience. To ensure scalability and reliability, techniques such as asynchronous processing, file queue management, and progress tracking can be incorporated. This enhancement is particularly valuable in scenarios where users need to digitize large volumes of documents, such as in enterprise or government settings.
 %\section{Future Works}
 %What could be done in the future to make your projects better.
 
