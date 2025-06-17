@@ -259,7 +259,8 @@ requirements of this project.
 
 \section{Scope of Work}
 
-The scope of this project involves the development of a web application that enables users to upload a PDF file. The web application will process text extraction using technique called pdf parsing. The primary function of the web application includes creating a form, editing a form, deleting a form, and filling a form. The final deliverable of this project will be a web application that allows users to manage the form and view the data, including ensuring data privacy and security measures to protect sensitive information by implementing authentication for the creator and a normal user. The project involves research of text parser for extract a input label from a pdf text and the development of generative AI for data type generation, also a Thai language translation to English.
+The scope of this project involves the development of a web application that enables users to upload a form file. The web application will process text extraction using technique called pdf parsing for PDF file and OCR for image. The primary function of the web application includes creating a form, editing a form, deleting a form, and filling a form. The final deliverable of this project will be a web application that allows users to manage the form and view the data, including ensuring data privacy and security measures to protect sensitive information by implementing authentication for the creator and a normal user. The project involves research of text parser for extract input label from a text and the development of generative AI for data type generation, also a Thai language translation to English.
+
 %\begin{itemize}
 %\item   What are the problems you are addressing? 
 %\item  Why they are important?
@@ -360,8 +361,56 @@ In the past, AI models like Variational Autoencoders (VAEs) and Generative Adver
 	\item \textbf{Encoder-decoder models} (such as T5): Combine both approaches and can handle tasks like summarizing or translating text.
 \end{enumerate}
 
+\subsection{Image Processing}
 
-\subsection{Portable Document Format.}
+Image processing is the one technique in Computer Vision (CV) that is used to enhance and prepare images for analysis by applying various computational algorithms. In the context of form conversion, image processing plays a critical role in improving the quality of scanned documents or digital images before they undergo text recognition.
+
+\subsubsection{Image Acquisition} 
+The first step in image processing is acquiring the image, where an image is captured using a camera, scanner, or another device. Then the image is converted into a digital format that can be manipulated by algorithms.
+
+\subsubsection{Preprocessing} 
+Preprocessing is a fundamental step where the raw image quality is improved to ensure it is ready for more advanced analysis. This involves techniques such as:
+
+\textbf{Image Enhancement}
+
+Image enhancement involves using techniques to improve the visual quality of an image so that important features are more visible. This is especially important when working with scanned documents or photos that may have different lighting conditions, colors, or other visual characteristics that could obscure the text. Here are some common techniques used for image enhancement:
+
+\begin{enumerate}
+	\item \textbf{Grayscale Conversion}
+	\item \textbf{Histogram Equalization}
+	\item \textbf{Thresholding}
+	\item \textbf{Contrast Adjustment}
+\end{enumerate}
+
+\textbf{Image Restoration}
+
+The Image Restoration process aims to improve the appearance of an image by fixing problems like noise and blurriness. It uses mathematical models to understand how the image got damaged and applies techniques to clean it up. Common techniques involved in image restoration include Noise Reduction and Blur removal.
+
+\subsubsection{Object Recognition}
+Object recognition is the process of identifying and classifying different regions in an image, referred to as patterns or objects. There are two main approaches to object recognition
+
+\begin{enumerate}
+	\item \textbf{Decision-Theoretic Approach:} This method uses numerical descriptions to analyze patterns. It looks at measurable features.
+	\item \textbf{Structural Approach:} This approach focuses on qualitative descriptions, using relational descriptors that describe the relationships and arrangements between different parts of the patterns.
+\end{enumerate}
+
+\subsection{Optical Character Recognition (OCR)}
+OCR or Optical Character Recognition is an input device used to read a printed text. OCR scans text in image, analyzes it character by character and converts it into machine-readable code and stores text on the system memory and processes it as a document. OCR is widely used in applications where transforming printed material into editable text.
+
+\subsection{OCR Architecture}
+After image processing, OCR comes into play. It extracts the text from the processed images, analyzing the document character by character to convert it into machine-readable code. It converts printed or handwritten text from forms into digital text, which can then be manipulated and stored. Once OCR extracts the raw text, text processing helps clean, format, and analyze this text.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=10cm]{./assets/ocr-loop.png}
+\caption{OCR Process from 
+\href{https://www.researchgate.net/profile/Adrian-Gomez-9/publication/281099638/figure/fig4/AS:614266293997575@1523463905255/Architecture-diagram-for-the-OCR-alternative.png}
+{researchgate.net}.}
+\label{fig:ocr-process}  
+\end{figure}
+
+
+\subsection{Portable Document Format}
 
 The Portable Document Format (PDF) is developed by Adobe in early 1993, it is a file format designed to display documents consistently across device and platform. The strength is preserve the formatting, fonts, images, and layout of the original document, ensuring a consistent and reliable presentation. A PDF file can include a varies type of content, such as text, image, vector graphics, hyperlinks, forms, annotations and even multimedia elements like audio and video.
 
@@ -747,7 +796,7 @@ Text extraction is the second step after a user uploads a file via the web appli
 
 \subsection{Text Parse}
 
-Text parsing is the third process after the extracted text has been completed. Text parse is the process of analyzing a text and breaking down the text to convert it into a structured format, In this process, the purpose of text parse is to analyze the layout of the form, by using a text from a previous process to identify where which text is the label of the input field.
+Text parsing is the third process after the extracted text has been completed. Text parse is the process of analyzing a text and breaking down the text to convert it into a structured format, In this process, the purpose of text parse is to analyze the layout of the form by using a text from a previous process to identify where which text is the label of the input field.
 
 
 %\subsubsection{Text Error Correction}
@@ -788,7 +837,37 @@ The Text Extraction Design is responsible for transforming an image file or PDF 
 PDF Text Extraction is using a python library called PyMuPDF to extract the text from and layout from PDF documents. This includes capturing elements such as paragraph positions, upper-case and lower-case text, which are essential for preserving the context and visual arrangement of the original document.
 
 \subsubsection{Optical Character Recognition Text Extraction}
-Optical Character Recognition MOSS PLEASE HELP ME HERE WA
+Our system also includes support for image-based form files using Optical Character Recognition, or OCR. This is especially useful when someone uploads a scanned document or a photo of a paper form instead of a digital PDF. Since text from images can’t be read directly like from a PDF, OCR helps us turn the image content into readable and usable text. And The OCR process that we design is break down into three main steps.
+
+\textbf{Preprocessing}
+
+This is the first step before any actual text detection happens. We need to clean and prepare the image so the OCR tool can “see” the text more clearly. If an image is blurry, dark, or has weird formatting, it makes it harder for the tool to work correctly.
+
+\begin{itemize}
+\item  \textbf{Grayscale Conversion:} We first turn the image into grayscale to make it simpler. Color doesn’t really help with reading text, so removing it helps focus only on the shapes of letters.
+
+\item \textbf{Binarization (Thresholding):} Then we turn the grayscale image into just black and white. This makes the text stand out more by separating it from the background.
+
+\item \textbf{Noise Reduction:} Some scanned images have little dots or smudges that aren’t part of the text. We try to clean those out so they don’t confuse the OCR.
+
+\item \textbf{Deskewing}  Sometimes an image isn’t scanned straight, so the text is slanted. We try to fix that by straightening it, which helps keep the lines of text in order.
+
+\item \textbf{Rescaling and Contrast} For low-quality or blurry images, we may need to make the image bigger or increase the contrast so the letters are more visible.
+
+\end{itemize}
+
+\textbf{Text Detection}
+
+Once the image is cleaned up, the next step is finding where the actual text is located in the image. We use an OCR engine called Tesseract, which looks for text blocks and figures out which parts of the image might contain useful text. It doesn’t recognize the letters yet—it just locates the areas with text.
+
+\textbf{Character Recognition}
+
+After detecting where the text is, Tesseract tries to figure out each letter by comparing it to patterns it has already learned. It works for both English and Thai, which fits our project well. Once it's done, the output is plain text that we can use in the next steps of our form conversion process.
+
+\textbf{Limitations}
+
+Even though OCR is useful, it's not perfect. If the image quality is poor—like if it’s too blurry, too dark, or has a weird font—the OCR might not read the text correctly. Also, handwritten text isn’t supported. Because of these issues, we currently focus more on text-based PDFs for form extraction, but we still plan to improve the OCR feature in the future.
+
 
 \subsection{Text Parse Design}
 After extracting raw text and layout metadata from PDF documents and image, the text parsing is a processes that identify a form section and a form input label. This module is identify input style into 3 categories, which is a dot, underscore and dash.
@@ -990,13 +1069,18 @@ The Translation is use to translate a Thai language input label to english. we h
 \caption{Translation Result}\label{fig:trans-result}
 \end{figure}
 
-\subsection{Data Type Analyzer}
+\subsection{Data Type Analyzer Result}
 
-As mentioned in Chapter 3, The data type analyzer is a process of generate a data type of each input label, by using a generative AI. And the result show that the data type analyzer can generate a correct and appropriate data type for each label. Importantly, the data type analyzer can output as a JSON array, as expected, enabling seamless integration into downstream processes. The test result show 
+As mentioned in Chapter 3, The data type analyzer is a process of generate a data type of each input label,
+by using a generative AI. And the result show that the data type analyzer can generate a correct and appropriate
+data type for each label. Importantly, the data type analyzer can output as a JSON array, as expected, enabling
+seamless integration into downstream processes.
+
+Furthermore, in order to verify the accuracy of the analysis, we compared the generative AI type field with the proper types that humans (us) developed to serve as the ground truth, or the version that we anticipate the system to generate.  The number of data types that matched the proper ones from the analyzer was then verified.  After that, we converted the accuracy into a percentage by dividing the number of right answers by the total number of fields. The overall accuracy of the data type analyzer was 76.2 percentage.
 
 \begin{figure}[H]
 \centering
-\fbox{\includegraphics[width= 10cm]{./assets/datatype-result.png}}
+\fbox{\includegraphics[width=10cm]{./assets/datatype-result.png}}
 \caption{Data Type Analyzer Result}\label{fig:datatype-result}
 \end{figure}
 
