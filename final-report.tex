@@ -269,7 +269,10 @@ The scope of this project involves the development of a web application that ena
 \section{Limitation of Project}
 The limitation of the project will addresses a possible constraints and challenges that might affect its scope, execution, or outcomes. the limiting factor are include time, cost and risk etc.
 
-\begin{itemize}
+\begin{itemize} 
+\item \textbf{OCR Accuracy:}The accuracy of OCR text extraction may vary depending on the quality of the up-
+loaded document, such as low-resolution images, poor lighting, and the project does not support hand-
+written text.
  \item \textbf{PDF Support:} The project supports text-based PDFs but not image-based ones. Text within scanned documents cannot be extracted due to the lack of OCR support. Additionally, some PDFs may fail during text extraction because they are compressed or contain missing characters.
   
     \item \textbf{Language Support:} While the system has the ability to translate text, the accuracy and availability of supported languages may be limited, with the project currently supporting Thai and English form only.
@@ -513,32 +516,35 @@ functionality and architecture.
 \subsection{System Requirements}
 
 \begin{itemize}
- \item The web application must allow users to log in with email and password. 
- \item The web application must allow the user to upload a form file to the system.
+ \item The web application must allow users to register, log in, and log out. 
+ \item The web application must allow the users to upload documents in formats of PDF and Image.
  \item The web application must allow users to fill the form without login.
- \item The web application must allow users to view the data of the form.
- \item The web application must allow users to edit the form before publishing.
+ \item The web application must be able to identify a input field of the uploaded form.
+ \item The web application must allow users to customize the form before publishing a access link.
+ \item The web application must allow users to access the form via a access link to fill a information.
+ \item The web application must allow users to view a result of the form.
+ \item The web application must allow user to export a result as a CSV file.
  \item The web application must allow users to delete the form.
- \item The web applications must provide the option for all logged-in users to logout.
 \end{itemize}
 
 \subsection{Feature List}
 
-\subsubsection{Form Layout Analysis System}
-
-The Form Layout Analysis System will extract all the text from the document that is uploaded by the user via a web application. The system will then analyze the form’s pattern, extract the input labels, translate the text into English, and send the translated information to a generative AI for data type generation.
-
-\subsubsection{Form Schema generator System}
-
-The Form Schema generator System will receive information from the Paper-Based Form Analysis System and Form Schema generator System must be able to generate a form schema that compatible with a form library.
-
-\subsubsection{Web Form System}
-
-The Web Form System must enable users to complete the form, store the data in the database, and see the data created by the form owner.
-
 \subsubsection{Registration and Authentication System}
 
 The Registration and Authentication System must enable a user to register and login to the system by using only email and password. This including a forgot password and the  OTP for reset password.
+
+\subsubsection{Form Layout Analysis Feature}
+
+The Form Layout Analysis System will extract all the text from the document that is uploaded by the user via a web application. The system will then analyze the form’s pattern, extract the input labels, translate the text into English, and send the translated information to a generative AI for data type generation.
+
+\subsubsection{Form Schema generator Feature}
+
+The Form Schema generator System will receive information from the Paper-Based Form Analysis System and Form Schema generator System must be able to generate a form schema that compatible with a form library.
+
+\subsubsection{Web Application Form}
+
+The Web Form System must enable users to complete the form, store the data in the database, and see the data created by the form owner.
+
 
 \section{Use Case Diagram}
 
@@ -713,56 +719,90 @@ Traditional Form Converter System is working.
 Figure \ref{fig:system-arch}, The diagram shown a system architecture in figure above, The System have divided into 3 part which front-end, back-end and database, each part have shown a technology stack, and here are the description of each component
 
 \begin{itemize}
-\item  \textbf{VueJS} is a Front-end JavaScript library for building UI
-\item \textbf{TailwindCSS} is a CSS framework for styling the UI and used with React
-\item \textbf{FastAPI} is a Back-end framework for building REST API
-\item \textbf{PostgreSQL}  is a relational database
-\item \textbf{Pydantic}  is a python library used for data validation 
-\item \textbf{SQLModel} is a Python base Object Relational Mapper (ORM) and SQL Tool kit
-\item \textbf{Formkit} is a form engine library for vue.js
-\item \textbf{Meta NLLB-200} is a Model for text translation
+\item  \textbf{VueJS} is a front-end Javascript library for building UI.
+\item \textbf{TailwindCSS} is a CSS framework for styling the UI and used with React.
+\item \textbf{FastAPI} is a Back-end framework for building REST API.
+\item \textbf{PostgreSQL}  is a open-source relational database.
+\item \textbf{Pydantic}  is a python library used for data validation.
+\item \textbf{SQLModel} is a Python base Object Relational Mapper (ORM) and SQL Tool kit.
+\item \textbf{Formkit} is a form engine library for Vue.js
+\item \textbf{NLLB-200} is a Machine learning Model for Text Translation from Meta.
 \item \textbf{PyMuPDF}  is a high-performance Python library for data extraction, analysis, conversion and manipulation of PDF documents.
-\item \textbf{Llama 3:8b} is a generative AI from Facebook
+\item \textbf{Llama 3:8b} is a text-based pre-trained and instruction-fine-tuned large language models.
 \end{itemize}
 
 
-\section{System Worflow}
+\section{System Workflows}
 
-\subsection{Extracting text and text parse}
+\subsection{Upload a file}
 
-\subsubsection{Extracting text}
+In the upload a file step, the user will use a web application to upload a file into our system. The file types that the user can upload are PDF and image files. and we will forward the file to the following step once the user has uploaded it to the system.
 
-Text extraction is the first step after a user uploads a file through the web application. In this stage, a PDF library such as PyMuPDF or pdfplumber is used to extract both the text and layout from the PDF. This is followed by text preprocessing to prepare the content for analysis such as normalizing special dot characters to standard dots to ensure accurate parsing during the next phase.
 
-\subsubsection{Text Parse}
+\subsection{Extracting text}
 
-Text parsing is the second process after the extracted text has been completed. Text parse is the process of analyzing a text and breaking down the text to convert it into a structured format, In this process, the purpose of text parse is to analyze the layout of the form, by using a text from a previous process to identify where which text is the label of the input field. The text parse algorithm starts by separating the text from each line and analyzing it line by line, If there is a word in front of the small point the text parse will mark the text as an input label, but if the line starts with the small point the parse will look back to the previous line to check whether if there any text that matches with the condition that parse has.
+Text extraction is the second step after a user uploads a file via the web application. In this step, a PDF library like PyMuPDF or pdfplumber is used to extract both the text and the layout from the PDF file. And for the image, we use Tesseract OCR to extract text and layout. After this step is completed, we will send a text to the text parser.
+
+%This is followed by text preprocessing to prepare the content for analysis such as normalizing special dot characters to standard dots to ensure accurate parsing during the next phase.
+
+\subsection{Text Parse}
+
+Text parsing is the third process after the extracted text has been completed. Text parse is the process of analyzing a text and breaking down the text to convert it into a structured format, In this process, the purpose of text parse is to analyze the layout of the form, by using a text from a previous process to identify where which text is the label of the input field.
+
 
 %\subsubsection{Text Error Correction}
 
 %Text Error Correction is the third process after extracting text and text parse, respectively. Text error correction is identifying and fixing errors in a given text. Text error correction includes spelling mistakes, grammatical errors, punctuation issues, and incorrect word usage. In this process, the text error correction focuses on spelling mistakes and vowel missed order, To make a correction, the first step is to tokenize the whole word into a single word and check the word with a dictionary, If the word does not exist then the system will mark it as an error like this "<ERROR>Wolrd</ERROR>". The system will correct the word with a cosine similarity technique, the technique will convert a dictionary into a vector and also an error text. It will rank with cosine similarity, then it will take the first rank to replace a text. This process is required only for the user who uploads an image.
 
-\subsection{AI Model}
+\subsection{Translation}
 
-\subsubsection{Translation}
+Translation is the fourth process and the first process that artificial intelligence have involve in the project. Translation is the process of translate a Thai input label to English Label. To make a Large Language identify a data type easily.
 
-Translation is the fourth process and the first process that AI have involve in the project. Translation is the process of  translate a Thai text to English text by using No Language Left Behind (NLLB) from meta, which the model is aim for high-quality translations directly between 200 languages. And we have selected a fine-tuned version of NLLB, which is wtarit/nllb-600M-th-en model and use it via hugging face transformer.
+%to English text by using No Language Left Behind (NLLB) from meta,
 
-\subsubsection{Data Type Generator}
+%which the model is aim for high-quality translations directly between 200 languages. And we have selected a fine-tuned version of NLLB, which is wtarit/nllb-600M-th-en model and use it via hugging face transformer.
 
-The Data Type Generator is the fifth process after preparing the process before the data type generator. The Data type generator is designed to generate a suitable datatype of each input field, for example, birthdate must be Date instead of string, passport number must be string, or text instead of number. All of these types will be applied with the form schema to make a form able to validate a correct data input. The data type generator is going to use a Llama 3 for prompt and generate a schema, and it will use an ollama as an interface for connecting to and communicating with the Llama 3 local model.
+\subsection{Data Type Generator}
+
+The Data Type Generator is the fifth process after preparing the process before the data type generator. The Data type generator is designed to generate a suitable datatype of each input field, for example, birthdate must be Date instead of string, passport number must be string, or text instead of number. All of these types will be applied with the form schema to make a form able to validate a correct data input. 
+
+%The data type generator is going to use a Llama 3 for prompt and generate a schema, and it will use an ollama as an interface for connecting to and communicating with the Llama 3 local model.
 
 \subsection{Form Schema Generator}
 
-The Form Schema Generator is the last process of the flow, the form schema generator will be used to generate a form schema from the output received from the data type generator to show output on the webpage and interact with the user.
+The Form Schema Generator is the last process of the workflow, the form schema generator will be used to generate a form schema by use the output received from the data type generator to show output on the webpage and interact with the user.
 
-\begin{figure}[!h]
+\begin{figure}[h]
 \centering
-\fbox{\includegraphics[width=10cm]{./assets/system-flow.png}}
+\fbox{\includegraphics[width=12cm]{./assets/system-flow.png}}
 \caption{System Workflow Diagram}\label{fig:system-workflow}
 \end{figure}
 
-\newpage
+
+\section{System Design}
+
+\subsection{Text Extraction Design}
+The Text Extraction Design is responsible for transforming an image file or PDF file into machine-readable text for use in the text parsing process. The text extraction process will be divided into two primary components: text extraction from images and text extraction from PDFs. This step also involves text normalization, which normalizes all dot styles to a standard dot. This is necessary because the text that has been detected will contain a variety of styles, including Unicode ellipsis, middle dot, and one dot leader.
+
+\subsubsection{PDF Text Extraction}
+PDF Text Extraction is using a python library called PyMuPDF to extract the text from and layout from PDF documents. This includes capturing elements such as paragraph positions, upper-case and lower-case text, which are essential for preserving the context and visual arrangement of the original document.
+
+\subsubsection{Optical Character Recognition Text Extraction}
+Optical Character Recognition MOSS PLEASE HELP ME HERE WA
+
+\subsection{Text Parse Design}
+After extracting raw text and layout metadata from PDF documents and image, the text parsing is a processes that identify a form section and a form input label. This module is identify input style into 3 categories, which is a dot, underscore and dash.
+The Text Parse is designed to first identify the type of input label by counting the number of characters that match each input style. The input style with the highest number of characters will be used for the next process. After the previous process has identified the input style, the text parse will commence the process of identifying the input label based on the input style. This will be achieved by combining regular expressions and rule-based heuristics to create a common pattern that is compatible with the sample input that we have. The final step in this process is the output cleaning process. During this step, we will remove all non-alphabetic characters and trim any unnecessary space from the output. In Figure \ref{fig:text-parse-flow}  will show a step of text parse.
+
+\begin{figure}[h]
+\centering
+\fbox{\includegraphics[width=5cm]{./assets/text-parse-flow.png}}
+\caption{Text Parse Flowchart}\label{fig:text-parse-flow}
+\end{figure}
+
+\subsection{Data Type Generator Design}
+In the Data Type Generator, we have designed to use a Llama as a large language Model (LLM) to determine the datatype of each input label. We use a structured prompting technique, which divides interactions with the model into two key components: a system prompt and a user prompt. The system prompt is used to set a behavior and role of the Llama, especially to instructing it to act as a data type classifier. After setting this context, the model receives a user prompt with the actual input label. It then analyzes the input and outputs the appropriate data type.
+
 
 \section{Database Design}
 
