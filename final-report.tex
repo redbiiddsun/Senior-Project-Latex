@@ -877,7 +877,8 @@ Figure \ref{fig:form-page} showcases the example of web form user interface, whi
 \section {Introduction}
 This chapter will cover the entire working process and implementation progress of our project. Address complex issues as well. And we will divide each topic based on its features, which will include project data preparation.
 
-\section{Data Preparation}
+
+\section{Data Collection and Data Categorized}
 
 To study the structure of input fields and textual elements, approximately over 100 PDF forms were collected from various sources. These documents reflect a wide range of formatting styles and content arrangements, offering a diverse dataset for analysis. The findings from this analysis informed the development of methods for layout structure detection, text extraction, and input field identification. And we categorized the forms into three distinct styles based on input field presentation, which have dot-style forms, line-style forms, and tabular-style forms. And the following figure show the example of each form styles.
 
@@ -899,13 +900,9 @@ To study the structure of input fields and textual elements, approximately over 
 \caption{Example of tabular-style forms}\label{fig:tabular-form}
 \end{figure}
 
-\section{Form Layout Analysis System}
+\subsection{Data Processing}
 
-The Paper-Based Form Analysis System is mainly focused on extracting a text from PDF file, and analyzing a form layout to identify an input label in the text, also the translation part and data type generator by using generative AI.
-
-\subsection{Text Extraction Feature}
-
-The Text Extraction Process has been implemented using PyMuPDF, a high-performance library. It is a library that facilitates the extraction, analysis, conversion, and manipulation of PDF data. The text extraction from the PDF file is illustrated in Figure \ref{fig:pdf-result}. However, there are still issues with the dot extraction process, as the dot character in some cases has multiple Unicode characters. To address this, we employ a text replacement algorithm to replace all potential dots with a standard dot or the Unicode character "U+002E" in order to normalize them. An additional issue is that a vowel in Thai text has been replaced with another character, such as {
+The Data Processing is a process of retrieving all the text from an uploaded file and convert to raw text content. For the image file has been implemented using Tesseract OCR, open-source library for character recognition from Google. it has been integrate with a image improvement and preparation system before process with a Tesseract, And in the Figure \ref{fig:ocr-result} show a result of the text after process with the OCR. And For the PDF file has been implemented using PyMuPDF, a high-performance library. It is a library that facilitates the extraction, analysis, conversion, and manipulation of PDF data. The text extraction from the PDF file is illustrated in Figure \ref{fig:pdf-result}. However, there are still issues with the dot extraction process, as the dot character in some cases has multiple Unicode characters. To address this, we employ a text replacement algorithm to replace all potential dots with a standard dot or the Unicode character "U+002E" in order to normalize them. An additional issue is that a vowel in Thai text has been replaced with another character, such as {
 \XeTeXlinebreaklocale "th_TH"	
 \XeTeXlinebreakskip = 0pt plus 1pt
 \thaifont
@@ -914,24 +911,38 @@ The Text Extraction Process has been implemented using PyMuPDF, a high-performan
 \XeTeXlinebreakskip = 0pt plus 1pt
 \thaifont
  ชื่อ."} Our research indicates that this issue is caused by the fact that the Unicode font is distinct from the standard font, and some may be the result of the compression of the PDF.
+ 
+ 
+From Figure \ref{fig:ocr-result} the image shows a low accuracy of text extraction, with many Thai characters misrecognized, replaced by incorrect symbols, numbers, or English letters. Although some keywords and document structure are partially preserved, most of the content is unusable and severely garbled. 
+
+ \begin{figure}[H]
+\centering
+\fbox{\includegraphics[width= 12cm]{./assets/OCR-result2.png}}
+\caption{OCR Text Extraction Result}\label{fig:ocr-result}
+\end{figure}
+
+From Figure \ref{fig:pdf-result} the image shows an organized text the and it have a highly accurate, with clear recognition of Thai characters, formatting, and structure. Most fields, such as date, subject, and student information, are preserved correctly, and the layout matches the expected output. There are minimal to no character recognition errors, making the result suitable for further processing or editing with little manual correction.
 
 \begin{figure}[H]
 \centering
-\fbox{\includegraphics[width= 10cm]{./assets/pdf-extract.png}}
+\fbox{\includegraphics[width= 12cm]{./assets/pdf-extract.png}}
 \caption{PDF Text Extraction Result}\label{fig:pdf-result}
 \end{figure}
 
-\subsection{Form Parser}
-The Form Parse is implemented to identify an input label of the form and separate a form title. we have te
+\subsection{Text Parser Result}
+
+As explained in Chapter 3, The Text Parser is a rule-bases algorithm, which references from the form sample dataset. By identify a common pattern that we got from data processing. And The test results show
+that the text parser can extract a simple input field label effectively, importantly the output can be use in the next step. In addition to testing the text parser capabilities, the algorithm was evaluated using a word-level accuracy metric. This method compares the parser’s output to the ground truth, which refers to the correct or expected result that has been manually labeled or verified. A word is considered correct only if it matches at least 75 percentage of the corresponding word in the ground truth and is in the same position. This ensures that the evaluation not only checks for word similarity but also for correct placement in the sequence. The accuracy is then determined by the proportion of correctly matched words relative to the total number of words in the ground truth. Based on this method, the text parser achieved an accuracy of 82.9 percentage. 
+Moreover, the text parser can't find a table layout, check box, or vector box because it only looks at text. which all of the following that have been mentioned can't be taken out as text.
 
 \begin{figure}[H]
 \centering
-\fbox{\includegraphics[width= 10cm]{./assets/form-parse.png}}
+\fbox{\includegraphics[width= 15cm]{./assets/form-parse.png}}
 \caption{Form Parse Result}\label{fig:Form-Parse}
 \end{figure}
 
 \subsection{Translation Thai to English}
-The Translation is use to translate a Thai language input label to english. we have use a NLLB-200 fined tuned model. Figure \ref{fig:trans-result} below show that the translation is working correctly but may not it may get a text that we expect, such as \textthai{วันเกิด} expected value to be Date of Birth, but the predicted result show "Birthdate". which it have ability to translate into a correct meaning.
+The Translation is use to translate a Thai language input label to english. we have use a NLLB-200 fined tuned model. Figure \ref{fig:trans-result} below show that the translation is working correctly but may not it may get a text that we expect, such as \textthai{วันเกิด} expected value to be date of birth, but the predicted result show "Birthdate". which it have ability to translate into a correct meaning.
 
 \begin{figure}[H]
 \centering
@@ -940,7 +951,8 @@ The Translation is use to translate a Thai language input label to english. we h
 \end{figure}
 
 \subsection{Data Type Analyzer}
-Figure \ref{fig:datatype-result} has shown the 3 simple test case result that input the array of text and the system will generate a json as output. And it show a correct result for 1 and 2, but the 3 has failed because we have input a Thai text and some field are not correct as expect result.
+
+As mentioned in Chapter 3, The data type analyzer is a process of generate a data type of each input label, by using a generative AI. And the result show that the data type analyzer can generate a correct and appropriate data type for each label. Importantly, the data type analyzer can output as a JSON array, as expected, enabling seamless integration into downstream processes. The test result show 
 
 \begin{figure}[H]
 \centering
@@ -951,7 +963,7 @@ Figure \ref{fig:datatype-result} has shown the 3 simple test case result that in
 
 \section{Web Application Implementation}
 
-The web application development is progressing well, with significant milestones achieved in the front-end implementation and back-end implementation. The following features have been successfully developed and tested with a responsive user interface.
+The web application development is progressing well, with significant milestones achieved in the front-end implementation and back-end implementation. The following features have been successfully developed and tested.
 
 \subsection{Front-end development}
 
@@ -973,7 +985,7 @@ In this project, we developed a frontend application using Vue 3 with TypeScript
 
 \begin{figure}[H]
 \centering
-\fbox{\includegraphics[width= 10cm]{./assets/auth-forgotpasswd.png}}
+\fbox{\includegraphics[width=10cm]{./assets/auth-forgotpasswd.png}}
 \caption{Implemented Forgot Passowrd}\label{fig:auth-forgotpasswd}
 \end{figure}
 
@@ -1091,7 +1103,7 @@ The backend of the application is responsible for data manipulation, form manage
 
 %\emph{\textthai{หัวข้อต่าง ๆ ในแต่ละบทเป็นเพียงตัวอย่างเท่านั้น หัวข้อที่จะใส่ในแต่ละบทขึ้นอยู่กับโปรเจคของนักศึกษาและอาจารย์ที่ปรึกษา}}
 
-\section {Introdution}
+\section {Introduction}
 
 In this chapter, we will summarize the progress made on the project, detailing the work completed. We will
 discuss challenges encountered throughout the project, describing the issues faced and solutions adopted to
@@ -1099,11 +1111,12 @@ address them. Finally, we will explore potential future work, identifying areas 
 increase the overall effectiveness of the project.
 
 \section {Workloads}
-This project was carried out over the course of one academic year, divided into two semesters. In the first semester, after selecting the project topic, our team began by studying the fundamentals of document digitization, form recognition, and PDF layout analysis. As none of the team members had prior experience in these areas, we focused on building a solid understanding of the core concepts and tools needed for converting PDF documents into structured web forms. We also explored Optical Character Recognition (OCR) technologies to evaluate their potential for future integration.
+This project was carried out over the course of one academic year, divided into two semesters. In the first semester, after selecting the project topic, our team began by studying the fundamentals of document digitization, optical character recognition, form recognition, and text layout analysis. As none of the team members had prior experience in these areas, we focused on building a solid understanding of the core concepts and tools needed for converting PDF documents into structured web forms. 
 
-Following this, we researched existing frameworks and libraries that support PDF parsing, form field detection, and table structure recognition. The team prioritized approaches that could handle diverse and complex PDF layouts to ensure flexibility in real-world applications.
+Following this, we researched existing frameworks and libraries that support PDF text extraction, form field detection, and table structure recognition. The team prioritized approaches that could handle diverse and complex form layouts to ensure flexibility in real-world applications.
 
-During the second semester, we implemented the core system focusing on reliable PDF-to-web form conversion. Key features included enhanced form layout detection, initial support for tabular structure mapping, and the ability to upload and process multiple files simultaneously. The system was designed with a modular structure, allowing future extensions such as improved OCR integration for image-based documents and advanced table/form detection using machine learning. Additionally, we developed a web-based interface that enables users to upload documents, preview generated web forms, and manage conversion outputs efficiently.
+During the second semester, we implemented the core system focusing on OCR and PDF to web form conversion. Key features included enhanced form layout detection and the upload file technique. The system was designed with a modular structure, allowing future extensions such as improved OCR integration for image-based documents and advanced table/form detection using machine learning. Additionally, we developed a web-based interface that enables users to upload documents, preview generated web forms, and manage conversion outputs efficiently.
+
 \begin{table}[H]
   \centering
   \caption{Workload and Progress Summary}
@@ -1113,6 +1126,7 @@ During the second semester, we implemented the core system focusing on reliable 
     \textbf{Workloads}    & \textbf{Progress} \\
     \hline
     \textbf{Research}                                   &                   \\
+     Learn about OCR          & Completed         \\
     Learn about generative AI model           & Completed         \\
     Learn about translation model            & Completed         \\
     Learn about text parser            & Completed         \\
@@ -1129,7 +1143,7 @@ During the second semester, we implemented the core system focusing on reliable 
     Implement front-end                                 & Completed         \\
     Implement back-end                                  & Completed         \\
     Implement text extraction                                  & Completed        \\
-    Implement text parser                                  & Improvement        \\
+    Implement text parser                                  & Completed        \\
     Implement translation                                  & Completed         \\
     Implement Llama model                                  & Completed         \\
     \hline
@@ -1179,7 +1193,7 @@ To further improve the performance, flexibility, and applicability of the system
 \textbf{Form Detection and Tabular Support:}
 Enhance the form detection component to recognize a wider variety of document layouts, including those containing complex structures such as tables and multi-column sections. This involves refining the layout analysis algorithms and integrating table structure recognition to ensure accurate mapping of PDF elements into corresponding web form fields. Techniques such as rule-based parsing combined with machine learning (e.g., layout classification or object detection models) can be applied to improve detection accuracy and robustness across diverse document types. This enhancement will enable the system to handle forms with more intricate designs, supporting a broader range of business and administrative use cases.
 
-\textbf{Multi-file Upload Support:}
+\textbf{Checkbox Support:}
 Implement functionality that allows users to upload multiple documents simultaneously, streamlining the workflow for processing large batches of files. This feature will support bulk conversion of PDF documents into web forms in a single operation, improving efficiency and user convenience. To ensure scalability and reliability, techniques such as asynchronous processing, file queue management, and progress tracking can be incorporated. This enhancement is particularly valuable in scenarios where users need to digitize large volumes of documents, such as in enterprise or government settings.
 %\section{Future Works}
 %What could be done in the future to make your projects better.
